@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/background_circle_border_dark_50">
+
+        <ImageButton
+            android:id="@+id/item_deal_type_img_category"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:tint="@color/color_black" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/item_deal_type_tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/food"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Bold"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/detail_font_size" />
+
+</LinearLayout>

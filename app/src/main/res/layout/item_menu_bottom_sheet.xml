@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/menu_linkmart_cate_img"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/sort_hot"
+        android:tint="@color/color_menu_selected"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/menu_linkmart_cate_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="20dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="@string/sort_sale"
+        android:textColor="@color/color_menu_selected"
+        android:textSize="@dimen/large_font_size" />
+
+    <ImageView
+        android:id="@+id/menu_linkmart_cate_img_check"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/sort_checked" />
+
+</LinearLayout>

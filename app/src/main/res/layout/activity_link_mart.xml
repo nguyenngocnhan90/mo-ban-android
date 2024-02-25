@@ -1,0 +1,229 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.moban.flow.linkmart.LinkmartActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/linkmart_tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/linkmart_nav"
+            layout="@layout/nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linkmart_tabbar"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@id/linkmart_tbToolbar"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/linkmart_btn_linkmart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="@string/all"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_font_size" />
+
+            <View
+                android:id="@+id/linkmart_line_linkmart"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linkmart_view_tabbar_purchased"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/linkmart_btn_purchased"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="@string/purchased_product"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_white_50"
+                android:textSize="@dimen/large_font_size" />
+
+            <View
+                android:id="@+id/linkmart_line_purchased"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linkmart_view_tabbar_reward"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/linkmart_btn_my_reward"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="@string/my_reward"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_white_50"
+                android:textSize="@dimen/large_font_size" />
+
+            <View
+                android:id="@+id/linkmart_line_my_reward"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1">-->
+
+        <!--<Button-->
+        <!--android:id="@+id/linkmart_btn_favorite"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:text="@string/favorite"-->
+        <!--android:textAppearance="@style/Regular"-->
+        <!--android:textColor="@color/color_black_60"-->
+        <!--android:textSize="@dimen/large_font_size" />-->
+
+        <!--<View-->
+        <!--android:id="@+id/linkmart_line_favorite"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/white"-->
+        <!--android:visibility="gone" />-->
+
+        <!--</RelativeLayout>-->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/project_detail_btn_utility"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="@string/project_detail_utility"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/large_font_size" />
+
+            <View
+                android:id="@+id/project_detail_img_utility"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/linkmart_view_main"
+        layout="@layout/linkmart_view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linkmart_footer"
+        android:layout_below="@id/linkmart_tabbar"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/linkmart_view_purchased"
+        layout="@layout/linkmart_view_purchased"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linkmart_footer"
+        android:layout_below="@id/linkmart_tabbar"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/linkmart_view_my_reward"
+        layout="@layout/linkmart_view_my_reward"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linkmart_footer"
+        android:layout_below="@id/linkmart_tabbar" />
+
+    <include
+        android:id="@+id/linkmart_view_favorite"
+        layout="@layout/linkmart_view_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linkmart_footer"
+        android:layout_below="@id/linkmart_tabbar"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linkmart_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_gray_70"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/lhc" />
+
+        <TextView
+            android:id="@+id/linkmart_tv_current_lhc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:baselineAligned="false"
+            android:text="@string/you_have_N_linkcoin"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/large_font_size" />
+
+    </LinearLayout>
+
+</RelativeLayout>

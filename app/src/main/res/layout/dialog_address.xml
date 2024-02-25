@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_white">
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/dialog_address_btn_close"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/close" />
+
+            <ImageView
+                android:id="@+id/dialog_address_btn_back"
+                android:layout_width="@dimen/default_size"
+                android:layout_height="@dimen/default_size"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:padding="11dp"
+                android:src="@drawable/arrow_back"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dialog_address_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_gray_background_50" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dialog_address_recycleView_city"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/color_white" />
+
+    <LinearLayout
+        android:id="@+id/dialog_address_district"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/dialog_address_item_all_district"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/dialog_address_tv_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normal_font_size" />
+
+            <TextView
+                android:id="@+id/dialog_address_tv_all_district"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_weight="6"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="15dp"
+                android:paddingStart="0dp"
+                android:text="@string/all_district"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_black_60"
+                android:textSize="@dimen/normal_font_size" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_gray_background_50" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dialog_address_recycleView_district"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/color_white" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/dialog_web_tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/dialog_web_nav_close"
+                android:layout_width="@dimen/default_size"
+                android:layout_height="@dimen/default_size"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:padding="11dp"
+                android:tint="@color/white"
+                android:src="@drawable/close" />
+
+            <TextView
+                android:id="@+id/dialog_web_tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_size"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/nav_imgBack"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:maxLines="1"
+                android:text="@string/review_service"
+                android:textAppearance="@style/Medium"
+                android:textSize="@dimen/large_font_size" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <WebView
+        android:id="@+id/dialog_web_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dialog_web_tbToolbar" />
+
+</RelativeLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/feed_banner_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:text="Bạn muốn làm gì hôm nay?"
+        android:paddingStart="16dp"
+        android:paddingEnd="0dp"
+        android:textAppearance="@style/Bold"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:id="@+id/item_feed_menu_view_menu"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:id="@+id/item_feed_so_cap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/item_feed_so_cap_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@color/color_text_field_bg"
+                android:scaleType="fitCenter"
+                android:src="@drawable/so_cap" />
+
+
+            <TextView
+                android:id="@+id/item_feed_so_cap_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Sơ Cấp"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/detail_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_feed_thu_cap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/item_feed_thu_cap_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@color/color_text_field_bg"
+                android:scaleType="fitCenter"
+                android:src="@drawable/thu_cap" />
+
+
+            <TextView
+                android:id="@+id/item_feed_thu_cap_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Thứ Cấp"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/detail_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_feed_product_book"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/item_feed_product_book_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@color/color_text_field_bg"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dat_cho" />
+
+            <TextView
+                android:id="@+id/item_feed_product_book_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/booked"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/detail_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_feed_product_transaction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/item_feed_product_transaction_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@color/color_text_field_bg"
+                android:scaleType="fitCenter"
+                android:src="@drawable/giao_dich" />
+
+
+            <TextView
+                android:id="@+id/item_feed_product_transaction_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Giao Dịch"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/detail_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_feed_reward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/item_feed_reward_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@color/color_text_field_bg"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_profile_gift" />
+
+
+            <TextView
+                android:id="@+id/item_feed_reward_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/link_reward"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/detail_font_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/white"
+        android:layout_alignBottom="@+id/item_feed_menu_view_menu"/>
+
+</LinearLayout>

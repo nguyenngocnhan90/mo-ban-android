@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/item_special_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_special_img"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/Regular"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/normal_font_size" />
+
+    <LinearLayout
+        android:layout_below="@id/item_special_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/color_black"
+            android:src="@drawable/clock"/>
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/Regular"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/normal_font_size"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background_image_round_5" />
+
+    <ImageView
+        android:id="@+id/item_special_img"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>

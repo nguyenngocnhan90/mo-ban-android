@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".flow.missions.MissionsActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mission_tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/mission_nav"
+            layout="@layout/nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/mission_tbToolbar"
+        android:background="@color/color_recycler_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TỔNG SỐ ĐIỂM THƯỞNG HIỆN CÓ"
+                android:textAlignment="center"
+                android:textAppearance="@style/Bold"
+                android:textColor="@color/color_black_60"
+                android:textSize="@dimen/medium_font_size" />
+
+            <TextView
+                android:id="@+id/missions_tv_point_badge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="0HLC"
+                android:textAlignment="center"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/background_border_top_bottom"
+                android:baselineAligned="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/mission_done"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Medium"
+                        android:textColor="@color/color_black_60"
+                        android:textSize="@dimen/medium_font_size" />
+
+                    <TextView
+                        android:id="@+id/missions_tv_done_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_ghost_20" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/mission_in_progress"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Medium"
+                        android:textColor="@color/color_black_60"
+                        android:textSize="@dimen/medium_font_size" />
+
+                    <TextView
+                        android:id="@+id/missions_tv_in_progress_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/missions_view_in_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/mission_in_progress"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Medium"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/medium_font_size" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/missions_recycler_view_in_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/missions_view_valid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/mission_valid"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Medium"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/medium_font_size" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/missions_recycler_view_valid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/missions_view_done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/mission_done"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Medium"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/medium_font_size" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/missions_recycler_view_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/missions_view_expired"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/mission_expired"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Medium"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/medium_font_size" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/missions_recycler_view_expired"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

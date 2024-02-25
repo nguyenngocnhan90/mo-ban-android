@@ -1,0 +1,957 @@
+<resources>
+    <string name="app_name">MoBan.vn</string>
+    <string name="slogan">CONNECTING AGENTS</string>
+    <string name="youtube_api_key">AIzaSyCo-DJVtfqQpMPFBcYfi789MmjPs4_YUQU</string>
+    <string name="facebook_app_id">700115700689621</string>
+    <string name="package_name">com.moban</string>
+    <string name="test_package_name">com.moban.test</string>
+
+    <!-- Font name -->
+    <string name="font_regular">fonts/WorkSans-Regular.ttf</string>
+    <string name="font_medium">fonts/WorkSans-Medium.ttf</string>
+    <string name="font_light">fonts/WorkSans-Light.ttf</string>
+    <string name="font_bold">fonts/WorkSans-SemiBold.ttf</string>
+
+    <!--Format-->
+    <string name="format_full_price_vnd">###,###,### VNĐ</string>
+    <string name="format_simple_price">###,### K</string>
+    <string name="normal_number_format">###,###,###,###</string>
+
+    <!-- Global-->
+    <string name="welcome">Xin chào</string>
+    <string name="read_more">Xem thêm</string>
+    <string name="view">Xem</string>
+    <string name="ok">OK</string>
+    <string name="retry">Thử lại</string>
+    <string name="cancel">Hủy</string>
+    <string name="skip">Bỏ qua</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="copy">Copy</string>
+    <string name="plus">+</string>
+    <string name="subtract">-</string>
+    <string name="update">Cập nhật</string>
+    <string name="update_now">Cập Nhật Ngay</string>
+    <string name="no_data">Không có dữ liệu</string>
+    <string name="month_chart">Tháng</string>
+    <string name="latest">Mới Nhất</string>
+    <string name="fee">Phí Hoa Hồng</string>
+    <string name="confirmed_revenue">Doanh Thu Ghi Nhận</string>
+    <string name="confirmed_revenue_2_lines">Doanh Thu\nGhi Nhận</string>
+    <string name="select">Vui Lòng Chọn</string>
+    <string name="price">Giá</string>
+    <string name="fee_project">Phí</string>
+    <string name="agree">Đồng ý</string>
+    <string name="later">Để sau</string>
+    <string name="done">Xong</string>
+    <string name="finish">Hoàn Tất</string>
+    <string name="get">Nhận</string>
+    <string name="got">Đã Nhận</string>
+    <string name="by">vì</string>
+    <string name="failed">Đã có lỗi xảy ra</string>
+    <string name="downloaded">Đã\nTải</string>
+    <string name="downloaded_image">Đã tải ảnh thành công</string>
+    <string name="download_image_failed">Không thể tải ảnh</string>
+    <string name="action_continue">Tiếp Tục</string>
+    <string name="confirm">Xác Nhận</string>
+
+    <string name="total">Tổng</string>
+    <string name="empty">Trống</string>
+    <string name="quick_select">Chọn Nhanh:</string>
+    <string name="floor">Tầng</string>
+    <string name="phone_support">0909352605</string>
+    <string name="stt">STT</string>
+    <string name="partner_name">Tên Đối Tác</string>
+    <string name="partner">Đối Tác</string>
+    <string name="partner_manager"> Quản Lý Đối Tác</string>
+    <string name="level">Level</string>
+    <string name="date_update">Cập nhật ngày</string>
+
+    <string name="update_ohio">Cập nhật MoBan.vn</string>
+    <string name="update_ohio_new_version">MoBan.vn đã có phiên bản mới.</string>
+    <string name="update_ohio_force_new_version">MoBan.vn đã có phiên bản mới.\n Hãy cập nhật ngay nhé.</string>
+
+    <string name="network_no_internet">Không có kết nối mạng</string>
+    <string name="network_check_and_try_again">Vui lòng kiểm tra và thử lại</string>
+    <string name="network_try_again">Thử lại</string>
+
+    <string name="ohio_request">Yêu cầu từ MoBan.vn App</string>
+    <string name="read_storage_request">MoBan.vn muốn truy cập vào bộ nhớ thiết bị của bạn</string>
+
+    <string name="no_location_permission">Chưa bật định vị</string>
+    <string name="request_location_permission">MoBan.vn app muốn sử dụng định vị để xác định vị trí của bạn. Nhấn \'Mở Cài Đặt\' để bật nhé.</string>
+
+    <string name="no_camera_permission">Chưa bật Camera</string>
+    <string name="request_camera_permission">MoBan.vn app muốn sử dụng camera để chụp ảnh. Nhấn \'Mở Cài Đặt\' để bật nhé.</string>
+
+    <string name="open_setting">Mở cài đặt</string>
+
+    <!-- Sort type -->
+    <string name="sort_latest">Mới Nhất</string>
+    <string name="sort_rate_asc">Phí Thấp Đến Cao</string>
+    <string name="sort_rate_desc">Phí Cao Đến Thấp</string>
+    <string name="sort_hot">Nổi Bật</string>
+    <string name="sort_sale">Giảm Giá</string>
+    <string name="sort_reward">Chính Sách Thưởng</string>
+
+    <!-- Currency -->
+    <string name="vnd">VNĐ</string>
+    <string name="million">Triệu</string>
+    <string name="billion">Tỷ</string>
+    <string name="lhc">Điểm</string>
+    <string name="unknown">Không xác định</string>
+
+    <string name="date">Ngày</string>
+
+    <!--Date time-->
+    <string name="second">giây</string>
+    <string name="minute">phút</string>
+    <string name="hour">giờ</string>
+    <string name="day">ngày</string>
+    <string name="month">tháng</string>
+    <string name="year">năm</string>
+    <string name="from_to">Từ $F - $T</string>
+    <string name="ago">trước</string>
+    <string name="just_done">vừa xong</string>
+    <string name="m2">m2</string>
+
+    <!--Sign in-->
+    <string name="signInEmail">Mã Đối Tác / Email / Số Điện Thoại</string>
+    <string name="signInPassword">Mật Khẩu</string>
+    <string name="signIn">Đăng nhập</string>
+    <string name="signIn_Register">Đăng nhập/Đăng ký</string>
+    <string name="signInContactSupport">liên hệ hỗ trợ</string>
+    <string name="signIn_cannot_open_facebook_messenger">We can\'t open Facebook Messenger right now. Please try again.</string>
+
+    <string name="signIn_input_error">Thông tin không hợp lệ</string>
+    <string name="signIn_input_error_msg">Vui lòng nhập tên đăng nhập và mật khẩu của bạn</string>
+    <string name="signIn_cannot_login">Không thể đăng nhập</string>
+    <string name="login_required_message">Chức năng này yêu cầu đăng nhập. Bạn vui lòng đăng nhập để sử dụng.</string>
+
+    <!-- forgot password -->
+    <string name="forgot_password_description">Hãy nhập Mã Đối Tác hoặc Số Điện Thoại của bạn\nchúng tôi hỗ trợ bạn lấy lại mật khẩu.</string>
+    <string name="username_phone">Mã Đối Tác / Số Điện Thoại</string>
+    <string name="username">Mã Đối Tác</string>
+    <string name="reset_password">Lấy Lại Mật Khẩu</string>
+    <string name="otp_code">Mã OTP</string>
+    <string name="new_password_confirm">Nhập Lại Mật Khẩu Mới</string>
+    <string name="new_password_title">Nhập Mật Khẩu Mới</string>
+    <string name="forgot_password">Quên Mật Khẩu</string>
+    <string name="cannot_request_error">Không thể gửi yêu cầu</string>
+    <string name="otp_is_empty_error">Chưa nhập mã xác thực</string>
+    <string name="otp_is_empty_message">Vui lòng nhập mã xác thực được gửi tới điện thoại của bạn</string>
+    <string name="new_password_is_empty_error">Chưa nhập mật khẩu mới</string>
+    <string name="new_password_is_empty_message">Vui lòng nhập mật khẩu mới và xác nhận để hoàn tất</string>
+    <string name="password_is_not_match_error">Mật khẩu không khớp</string>
+    <string name="password_is_not_match_message">Vui lòng nhập và xác nhận chính xác mật khẩu mới của bạn</string>
+    <string name="can_not_change_password_error">Không thể xác nhận mật khẩu của bạn</string>
+
+    <!--tab-->
+    <string name="tab_home">Trang Chính</string>
+    <string name="tab_profile">Cá Nhân</string>
+    <string name="tab_news">Tin Tức</string>
+    <string name="tab_project">Dự Án</string>
+    <string name="tab_more">Thêm</string>
+    <string name="tab_activity">Hoạt Động</string>
+    <string name="tab_trans_coin">Chuyển Điểm</string>
+
+    <string name="request_product">Yêu Cầu Sản Phẩm</string>
+    <string name="call_support">Gọi Hỗ Trợ</string>
+    <string name="refer_partner">Giới Thiệu Đối Tác Mới</string>
+
+    <!--profile-->
+    <string name="profile_info_label">Thông tin</string>
+    <string name="profile_point_label">Điểm thưởng</string>
+    <string name="profile_education_label">Đào tạo</string>
+
+    <string name="profile_intro_label">Giới thiệu</string>
+    <string name="profile_info_account_label">Thông tin cá nhân</string>
+    <string name="profile_info_company_label">Thông tin công ty</string>
+    <string name="link_reward">Reward</string>
+    <string name="linkhub">Hub</string>
+    <string name="linkbook">Book</string>
+    <string name="request_delete_account">Yêu cầu xóa tài khoản</string>
+    <string name="delete_account">Xóa Tài Khoản</string>
+
+    <string name="ohio_partner_benefit">Để nhận được những hỗ trợ, ưu đãi dành riêng cho đối tác MoBan.vn</string>
+
+    <!--Home-->
+    <string name="home_all">Tất Cả</string>
+    <string name="home_search_partner">Tìm kiếm đối tác</string>
+    <string name="home_favorite_project">Dự Án Quan Tâm</string>
+    <string name="home_new_post">Bạn đang nghĩ gì</string>
+
+    <string name="search_partner_title">Tìm Kiếm Đối Tác</string>
+    <string name="search_partner">Nhập tên đối tác</string>
+    <string name="search_referrer_title">Người Giới Thiệu</string>
+    <string name="search_referrer">Nhập mã giới thiệu hoặc tên</string>
+    <string name="notification">Thông Báo</string>
+    <string name="notification_alert_message">Bật thông báo để nhận những tin tức, cập nhật mới nhất từ MoBan.vn</string>
+
+    <string name="feed_like">Thích</string>
+    <string name="feed_remove_like">Bỏ Thích</string>
+    <string name="feed_comment">Bình Luận</string>
+    <string name="feed_reply">Trả lời</string>
+    <string name="feed_share">Chia Sẻ</string>
+    <string name="feed_follow">Theo Dõi</string>
+    <string name="feed_unfollow">Bỏ Theo Dõi</string>
+    <string name="feed_comment_placeholder">Viết bình luận của bạn</string>
+    <string name="feed_send">Gửi</string>
+    <string name="feed_load_more_comment">Xem thêm %d bình luận</string>
+    <string name="feed_edit">Sửa Bài Viết</string>
+    <string name="feed_notify">Bật Thông Báo</string>
+    <string name="feed_notify_off">Tắt Thông Báo</string>
+    <string name="feed_delete">Xóa Bài Viết</string>
+
+    <string name="feed_you_did_follow">Bạn đã theo dõi bài viết</string>
+    <string name="feed_followed_msg">MoBan.vn sẽ gửi thông báo cho bạn về bài viết này.</string>
+    <string name="feed_download_image">Lưu ảnh xuống máy</string>
+
+    <string name="feed_birthday_today">Hôm nay sinh nhật ai?</string>
+    <string name="feed_birthday">Chúc Mừng Sinh Nhật</string>
+    <string name="feed_send_birthday">Cùng gửi lời chúc đến Đối Tác</string>
+    <string name="new_partner">Đối Tác Mới</string>
+    <string name="feed_new_partner">Chúc Mừng Đối Tác Mới</string>
+    <string name="feed_new_partner_description">Gửi lời chúc mừng đến Đối Tác Mới</string>
+    <string name="deal_today">Giao Dịch Hôm Nay</string>
+    <string name="project">Dự Án</string>
+    <string name="status">Tình Trạng</string>
+    <string name="congrat_best_partner">Bảng Xếp Hạng Đối Tác</string>
+    <string name="congrat_best_badge">Dành</string>
+    <string name="view_detail">Xem Chi Tiết</string>
+    <string name="quarter">Quý</string>
+    <string name="hurom">Hurom</string>
+    <string name="smart_home">Smart Home</string>
+
+    <!-- Top Partner -->
+    <string name="top_partner">Bảng Xếp Hạng</string>
+    <string name="top_month">Theo Tháng</string>
+    <string name="top_quarter">Theo Quý</string>
+    <string name="top_year">Theo Năm</string>
+
+    <!--Project-->
+    <string name="project_search">Tìm kiếm dự án</string>
+    <string name="project_agent_rate">Phí Dịch Vụ: </string>
+    <string name="project_price_unit">tr/m2</string>
+    <string name="project_search_history">Lịch Sử Tìm Kiếm</string>
+    <string name="project_favorite_project">Dự Án Nổi Bật</string>
+    <string name="project_search_project_with_keyword">Tìm Kiếm Với Từ Khoá </string>
+    <string name="project_search_result">Kết Quả Tìm Kiếm</string>
+    <string name="search">Tìm Kiếm</string>
+    <string name="delete_search">Xóa Tìm Kiếm</string>
+    <string name="project_sort">Sắp Xếp:</string>
+    <string name="search_project">Tìm kiếm dự án</string>
+    <string name="search_secondary">Tìm kiếm bất động sản</string>
+    <string name="search_project_advance">Tìm Kiếm Nâng Cao</string>
+    <string name="all">Tất Cả</string>
+
+    <string name="villa">Biệt Thự</string>
+    <string name="dat_nen">Đất Nền</string>
+    <string name="nha_pho">Nhà Phố</string>
+    <string name="chung_cu">Chung Cư</string>
+    <string name="can_ho">Căn Hộ</string>
+    <string name="shop_house">ShopHouse</string>
+    <string name="office_tel">OfficeTel</string>
+    <string name="condotel">CONDOTEL</string>
+    <string name="select_city">Chọn Tỉnh/Thành Phố</string>
+    <string name="select_district">Chọn Quận/Huyện</string>
+    <string name="select_host">Chọn Chủ Đầu Tư</string>
+
+    <!--Project Detail-->
+    <string name="project_detail_feeds">Bài Viết</string>
+    <string name="project_detail_cart">Giỏ Hàng</string>
+    <string name="project_detail_book">Book Căn</string>
+    <string name="project_detail_info">Thông Tin</string>
+    <string name="project_detail_policy">Chính Sách</string>
+    <string name="project_detail_library">Thư Viện</string>
+    <string name="project_detail_utility">Tiện Ích</string>
+    <string name="project_detail_admin_manage">Admin Quản Lý</string>
+    <string name="project_detail_cart_empty">Trống</string>
+    <string name="project_detail_cart_book">Book</string>
+    <string name="project_detail_cart_booked">Đặt Chổ</string>
+    <string name="project_detail_cart_deposit">Đặt Cọc</string>
+    <string name="project_detail_cart_contract">Hợp Đồng</string>
+    <string name="project_hosting">Chủ Đầu Tư</string>
+    <string name="project_type">Loại Dự Án</string>
+    <string name="project_serial">Số Thứ Tự</string>
+    <string name="open_date">Ngày Mở Bán</string>
+    <string name="transfer_date">Ngày Bàn Giao</string>
+    <string name="bank">Ngân Hàng Bảo Trợ</string>
+    <string name="city">Tỉnh/Thành Phố</string>
+    <string name="city_name">Tỉnh</string>
+    <string name="all_district">Chọn tất cả Quận/Huyện</string>
+    <string name="district">Thành Phố/Quận/Huyện</string>
+    <string name="district2">Quận/Huyện</string>
+    <string name="project_website">Website Dự Án</string>
+    <string name="project_zalo">Zalo Dự Án</string>
+    <string name="map">Bản Đồ</string>
+    <string name="view_map">Xem Bản Đồ</string>
+    <string name="zoning">Quy Hoạch</string>
+    <string name="view_zoning">Xem Quy Hoạch</string>
+    <string name="project_overview">Tổng Quan Dự Án</string>
+    <string name="intro">Giới Thiệu</string>
+    <string name="project_location">Vị Trí Dự Án</string>
+    <string name="ohio_policy">Chính Sách MoBan.vn</string>
+    <string name="hosting_policy">Chính Sách Chủ Đầu Tư</string>
+    <string name="error_not_select_city_title">Bạn Chưa Chọn Tỉnh/Thành Phố</string>
+    <string name="error_not_select_city_message">Vui lòng chọn Tỉnh/Thành Phố trước</string>
+    <string name="sale_kits">Sale Kits</string>
+    <string name="share_kit">Share Kit</string>
+    <string name="share">Chia Sẻ</string>
+    <string name="download">Tải Xuống Máy</string>
+    <string name="downloading">Đang Tải Xuống</string>
+    <string name="downloaded_document">Đã tải file xuống máy</string>
+
+    <string name="project_detail_feed_empty_text">Chưa có bài viết nào liên quan dự án này</string>
+    <string name="project_detail_cart_empty_text">Chưa có giỏ hàng nào trong dự án này</string>
+    <string name="project_detail_book_empty_text">Bạn chưa có book căn nào cho dự án này</string>
+    <string name="project_detail_info_empty_text">Chưa có thông tin nào trong dự án này</string>
+    <string name="project_detail_policy_empty_text">Chưa có chính sách nào trong dự án này</string>
+    <string name="project_detail_library_empty_text">Chưa có thư viện nào trong dự án này</string>
+
+    <string name="project_detail_cart_select_block">Chọn Block</string>
+    <string name="project_detail_cart_select_floor">Chọn Tầng</string>
+    <string name="project_detail_cart_search_result_text">Có $N căn trong cơ sở dữ liệu</string>
+    <string name="project_detail_general">Tổng Quát </string>
+    <string name="project_detail_floor">Tầng</string>
+    <string name="project_detail_block">Block</string>
+    <string name="project_detail_apartment">Căn</string>
+    <string name="project_detail_apartment_status">Tình Trạng</string>
+    <string name="has_num_floors">Có $N tầng.</string>
+    <string name="has_num_projects">Có $N dự án.</string>
+
+    <string name="apartment">CĂN HỘ</string>
+    <string name="project_detail_apartment_detail">Chi Tiết Căn</string>
+    <string name="project_detail_apartment_num_room">Số Phòng</string>
+    <string name="project_detail_apartment_size">Diện Tích</string>
+    <string name="project_detail_apartment_direction">Hướng</string>
+    <string name="project_detail_apartment_cost">Giá Tiền</string>
+
+    <string name="project_detail_promotion">Ưu Đãi</string>
+    <string name="project_detail_promotion_empty">Bạn chưa chọn ưu đãi</string>
+    <string name="project_detail_promotion_none">Không có ưu đãi</string>
+    <string name="project_detail_select_promotion">Chọn Ưu Đãi</string>
+    <string name="project_detail_unselect_promotion">X  Bỏ Ưu Đãi</string>
+    <string name="project_detail_customer_detail">Thông Tin Khách</string>
+    <string name="project_detail_customer_name">Tên Khách</string>
+    <string name="project_detail_customer_name_placeholder">Nhập Tên Khách</string>
+    <string name="project_detail_customer_phone">Điện Thoại</string>
+    <string name="project_detail_customer_phone_placeholder">Nhập Số Điện Thoại</string>
+
+    <string name="project_detail_customer_booking_invoice">Phiếu Đặt Chổ</string>
+    <string name="project_detail_customer_invoice">Phiếu Thu</string>
+
+    <string name="project_detail_book_now">Book Ngay</string>
+    <string name="project_detail_quick_book">Book Nhanh</string>
+    <string name="project_detail_login_to_book">Đăng Nhập Ngay</string>
+
+    <!--Booking Detail-->
+    <string name="overview">Tổng Quan</string>
+    <string name="overview_flat">Tổng Quan Căn</string>
+    <string name="detail">Chi Tiết</string>
+    <string name="detail_flat">Chi Tiết Căn</string>
+    <string name="transaction">Giao Dịch</string>
+    <string name="transaction_list">Danh Sách Giao Dịch</string>
+    <string name="project_detail_transaction_pending">Đang Chờ</string>
+    <string name="project_detail_transaction_out_of_time">Hết Hạn</string>
+    <string name="project_detail_transaction_end_time">00:00</string>
+    <string name="update_invoice_booking_ok">Cập Nhật Phiếu Đặt Chổ Thành Công</string>
+    <string name="update_invoice_booking_ok_msg">Vui lòng đợi phản hồi từ Admin hệ thống</string>
+    <string name="update_invoice_booking_error">Cập Nhật Đặt Chổ Thất Bại</string>
+    <string name="update_invoice_booking_error_msg">Vui lòng thử lại sau</string>
+    <string name="update_invoice_ok">Cập Nhật Phiếu Thu Thành Công</string>
+    <string name="update_invoice_ok_msg">Vui lòng đợi phản hồi từ Admin hệ thống</string>
+    <string name="update_invoice_error">Cập Nhật Phiếu Thu Thất Bại</string>
+    <string name="update_invoice_error_msg">Vui lòng thử lại sau</string>
+
+    <string name="new_booking">Tạo Book Căn</string>
+    <string name="customer_info">Thông Tin Khách</string>
+    <string name="cus_fullname_require">Họ Và Tên Khách *</string>
+    <string name="cus_phone_require">Điện Thoại *</string>
+    <string name="cus_cmnd_require">Số CMND/Hộ Chiếu *</string>
+    <string name="cus_cmnd_require_placeholder">Nhập Số CMND/Hộ Chiếu</string>
+    <string name="flat_id_booking">Mã Căn (nếu có)</string>
+    <string name="flat_id_placeholder_booking">VD: C03-01</string>
+
+    <!-- Home Deal -->
+    <string name="num_of_deals">Có $N deal dành riêng cho bạn.</string>
+
+    <!-- Reward-->
+    <string name="reward">Thành Tích</string>
+    <string name="reward_report">Báo Cáo</string>
+    <string name="reward_level">Xếp Hạng</string>
+    <string name="reward_badge">Danh Hiệu</string>
+    <string name="reward_level_point">Điểm Level</string>
+    <string name="reward_link_point">Điểm Linkpoint</string>
+    <string name="reward_agent_fee">Phí Môi Giới</string>
+    <string name="reward_deposit_fee">Mức Ứng Phí</string>
+    <string name="reward_level_title">Quyền Lợi Các Hạng</string>
+    <string name="reward_level_reach_title">$N Đã Đạt Được</string>
+    <string name="reward_level_point_reach">$N đã đạt $P Điểm Level</string>
+    <string name="reward_level_need_point_to_next_level">Cần thêm $P Điểm Level để lên Hạng tiếp theo.</string>
+    <string name="reward_next_level">Level Tiếp Theo</string>
+    <string name="reward_next_level_point">Điểm Level Cần Đạt:</string>
+    <string name="kips_level">Kpi Level</string>
+    <string name="group_revenue">Doanh Thu Nhóm</string>
+    <string name="management_fee">Phí Quản Lý</string>
+    <string name="link_point">Link Point</string>
+    <string name="num_partner">Số Lượng Đối Tác</string>
+    <string name="review_partner">Đánh Giá Đối Tác</string>
+    <string name="support_fee">Phí Hổ Trợ</string>
+
+    <string name="reward_level_member">Thành Viên</string>
+    <string name="reward_level_partner">Level Đối Tác</string>
+    <string name="reward_level_partner_manager">Level QLDT</string>
+    <string name="reward_level_director">B.O</string>
+    <string name="reward_level_register">ĐĂNG KÝ</string>
+    <string name="reward_level_member_sub_1">Được ứng trước 20%</string>
+
+    <string name="reward_level_silver">HẠNG BẠC</string>
+    <string name="reward_level_silver_point">CẦN 3076 Điểm</string>
+    <string name="reward_level_silver_sub_1">Tặng thêm 1% tỷ lệ hoa hồng</string>
+    <string name="reward_level_silver_sub_2">Được ứng trước 25%</string>
+
+    <string name="reward_level_gold">HẠNG VÀNG</string>
+    <string name="reward_level_gold_point">CẦN 4615 Điểm</string>
+    <string name="reward_level_gold_sub_1">Tặng thêm 2% tỷ lệ hoa hồng</string>
+    <string name="reward_level_gold_sub_2">Được ứng trước 30%</string>
+    <string name="reward_level_gold_sub_3">Được hỗ trợ giải quyết công việc trực tiếp từ Giám Đốc Khối Kinh Doanh</string>
+
+    <string name="reward_level_diamond">HẠNG KIM CƯƠNG</string>
+    <string name="reward_level_diamond_point">CẦN 7692 Điểm</string>
+    <string name="reward_level_diamond_sub_1">Tặng thêm 5% tỷ lệ hoa hồng</string>
+    <string name="reward_level_diamond_sub_2">Được ứng trước 50%</string>
+    <string name="reward_level_diamond_sub_3">Được hỗ trợ giải quyết công việc trực tiếp từ CEO</string>
+    <string name="reward_level_diamond_sub_4">Được đặt xe đi dự án</string>
+
+    <string name="reward_select_type_badge">TẤT CẢ CÁC DANH HIỆU</string>
+
+    <!-- Deals -->
+    <string name="deals_num_of_deals">SỐ LƯỢNG GIAO DỊCH BẠN CÓ</string>
+    <string name="deals_num_of_contracts">TỔNG SỐ HỢP ĐỒNG</string>
+    <string name="deals_num_of_revenue">TỔNG DOANH THU</string>
+    <string name="pending_deals">Giao Dịch Đang Chờ Duyệt</string>
+    <string name="deals_date">Giao dịch ngày</string>
+    <string name="reviewable_deal">Giao Dịch Cần Đánh Giá</string>
+
+    <!--Salary-->
+    <string name="salary">Thu Nhập</string>
+    <string name="policy">Chính Sách</string>
+    <string name="salary_view_policy">Xem Chi Tiết</string>
+    <string name="personal_revenue">Hoa Hồng Dự Án</string>
+    <string name="group_management_fee">Phí Quản Lý Nhóm</string>
+
+    <!--Mission-->
+    <string name="mission">Nhiệm Vụ</string>
+    <string name="mission_done">Nhiệm Vụ Đã Làm</string>
+    <string name="mission_in_progress">Nhiệm Vụ Đang Làm</string>
+    <string name="mission_valid">Nhiệm vụ còn hiệu lực</string>
+    <string name="mission_expired">Nhiệm vụ đã hết hạn</string>
+
+    <!-- Deal Detail-->
+    <string name="deal_detail">Chi Tiết Giao Dịch</string>
+    <string name="info">Thông Tin</string>
+    <string name="num_deals">Số Lượng Đặt Chổ</string>
+    <string name="history">Lịch Sử</string>
+    <string name="customer_info_1">Thông Tin Khách Hàng</string>
+    <string name="full_name">Họ và Tên</string>
+    <string name="project_info_2">Thông Tin Dự Án</string>
+    <string name="project_name">Tên Dự Án</string>
+    <string name="flat_id">Mã Căn</string>
+    <string name="flat_id_placeholder">Nhập Mã Căn</string>
+    <string name="product_price">Giá Sản Phẩm</string>
+    <string name="booked">Đặt Chỗ</string>
+    <string name="seller_revenue">Doanh Thu Môi Giới</string>
+    <string name="seller_profit">Hoa Hồng Môi Giới</string>
+    <string name="deal_info_3">Thông Tin Giao Dịch</string>
+    <string name="seller">Nhân Viên Giao Dịch</string>
+    <string name="leader">Trưởng Phòng</string>
+    <string name="director">Giám Đốc</string>
+    <string name="state">Trạng Thái</string>
+    <string name="view_history">Xem Lịch Sử</string>
+    <string name="current_state">Đang ở giai đoạn này</string>
+    <string name="deal_status_title">Trạng thái:</string>
+    <string name="deal_booked">Đặt Chỗ</string>
+    <string name="deal_cancel_booked">Hủy Đặt Chỗ</string>
+    <string name="deal_deposited">Đã Cọc</string>
+    <string name="deal_cancel_deposited">Đã Hủy Cọc</string>
+    <string name="deal_cancel_fee_01">Ứng Phí Lần 1</string>
+    <string name="deal_cancel_fee_02">Ứng Phí Lần 2</string>
+    <string name="deal_cancel_fee_03">Ứng Phí Lần 3</string>
+    <string name="deal_cancel_fee_completed">Hoàn Tất Ứng Phí</string>
+    <string name="deal_cancel_commission">Hoàn Tất Chi Hoa Hồng</string>
+    <string name="deal_contracted">Hợp Đồng</string>
+    <string name="deal_copy">Sao Chép Đặt Chỗ</string>
+    <string name="deal_change_to_coc">Chuyển Trạng Thái Cọc</string>
+    <string name="deal_change_to_contract">Chuyển Sang Hợp Đồng</string>
+    <string name="deal_change_to_coc_document_name">Chứng Từ Cọc</string>
+    <string name="deal_change_to_contract_document_name">Chứng Từ</string>
+    <string name="related_document">Giấy Tờ Liên Quan</string>
+    <string name="contract_document">Hợp Đồng Mua Bán</string>
+    <string name="deal_edit_menu">Chỉnh Sửa Thông Tin Giao Dịch</string>
+    <string name="deal_cancel">Huỷ Chỗ</string>
+    <string name="deal_refund">Hoàn Chỗ</string>
+    <string name="deal_re_submit">Đặt Chỗ Lại</string>
+    <string name="deal_cancel_confirm">Bạn có chắc chắn muốn hủy đặt chỗ này?</string>
+    <string name="deal_cancel_failed_title">Không thể hoàn chỗ</string>
+    <string name="deal_cancel_failed_desc">Vui lòng kiểm tra lại hoặc liên hệ với DVĐT</string>
+    <string name="deal_review">Đánh Giá Giao Dịch</string>
+    <string name="send_review">Gửi Đánh Giá</string>
+    <string name="deal_note_review">Chia sẽ thêm đánh giá của bạn về Admin hoặc QLĐT (…, &#8230;)</string>
+    <string name="admin_manager">Admin Quản Lý</string>
+    <string name="qldt">Quản Lý Đối Tác</string>
+    <string name="note">Ghi Chú</string>
+    <string name="secure">Bảo Mật</string>
+
+    <!-- Review Deal Detail-->
+    <string name="review_not_rating_title">Bạn chưa chọn đủ điểm đánh giá</string>
+    <string name="review_not_rating_desc">Vui lòng chọn điểm đánh giá cho cả Admin Quản Lý và Quản Lý Đối Tác</string>
+    <string name="review_not_rating_admin_title">Bạn chưa chọn điểm đánh giá</string>
+    <string name="review_not_rating_admin_desc">Vui lòng chọn điểm đánh giá cho Admin Quản Lý</string>
+    <string name="can_not_review_title">Không thể gửi đánh giá</string>
+    <string name="can_not_review_desc">Vui lòng kiểm ra thông tin và thử lại</string>
+    <string name="not_review">Chưa Đánh Giá</string>
+    <string name="you_has_sent_review_title">Bạn đã gửi đánh giá</string>
+    <string name="you_has_sent_review_desc">Bạn không thể gửi thêm đánh giá cho giao dịch này.</string>
+    <string name="you_has_deals_not_review_tabbar">Bạn còn $N giao dịch chưa đánh giá.\nĐánh giá ngay nhé.</string>
+    <string name="you_has_deals_not_review_title">Bạn còn $N giao dịch chưa đánh giá</string>
+    <string name="you_has_deals_not_review_desc">Hãy đánh giá những giao dịch cũ của bạn để tiếp tục nhé.</string>
+    <string name="deal_rejected">Giao dịch đã bị từ chối</string>
+
+    <!-- QR Code -->
+    <string name="qr_code">Quét Mã QR</string>
+    <string name="qr_code_employee">Mã Nhân viên</string>
+    <string name="qr_code_partner">Mã Đối Tác</string>
+    <string name="scan_qr_code">Scan QR code</string>
+
+    <!-- Profile detail-->
+    <string name="personal_info">Thông Tin Cá Nhân</string>
+    <string name="gender">Giới Tính</string>
+    <string name="birthday">Ngày Sinh</string>
+    <string name="birthday_placeholder">Nhập Ngày Sinh</string>
+    <string name="birthday_require">Ngày Sinh *</string>
+    <string name="email">Email</string>
+    <string name="phone">Điện Thoại</string>
+    <string name="address">Địa Chỉ</string>
+    <string name="company_info">Thông Tin Công Ty</string>
+    <string name="employee_code">Mã Nhân Viên</string>
+    <string name="employee_title">Chức Vụ</string>
+    <string name="joined_date">Ngày vào</string>
+    <string name="identity">CMND</string>
+    <string name="identity_passport">CMND/Hộ Chiếu</string>
+    <string name="identity_title_require">Hình Ảnh Chứng Minh Nhân Dân *</string>
+    <string name="identity_input">Nhập CMND</string>
+    <string name="issued_date">Ngày Cấp</string>
+    <string name="issued_date_require">Ngày Cấp *</string>
+    <string name="issued_date_input">Nhập Ngày Cấp</string>
+    <string name="issued_place_input">Nhập Nơi Cấp</string>
+    <string name="issued_place">Nơi Cấp</string>
+    <string name="issued_place_require">Nơi Cấp *</string>
+    <string name="contact_info">Thông Tin Liên Hệ</string>
+    <string name="permanent_address">Địa Chỉ Hộ Khẩu TT</string>
+    <string name="permanent_address_require">Địa Chỉ Hộ Khẩu TT *</string>
+    <string name="permanent_address_input">Nhập Địa Chỉ Hộ Khẩu TT</string>
+    <string name="contact_address">Địa Chỉ Liên Lạc</string>
+    <string name="contact_address_require">Địa Chỉ Liên Lạc *</string>
+    <string name="contact_address_input">Nhập Địa Chỉ Liên Lạc</string>
+    <string name="money_deposit">Số Tiền Đặt Chỗ</string>
+    <string name="money_deposit_require">Số Tiền Đặt Chỗ *</string>
+    <string name="money_deposit_input">Nhập Số Tiền</string>
+    <string name="phone_input">Nhập Điện Thoại</string>
+    <string name="email_input">Nhập Email</string>
+
+
+    <!-- Gift list -->
+    <string name="new_gift">DEAL MỚI</string>
+    <string name="new_gift_demo">Khoa Học và Công Nghệ</string>
+    <string name="view_now">Xem Ngay</string>
+    <string name="get_gift">Nhận phúc lợi</string>
+    <string name="get_gift_confirm">Bạn có chắc muốn nhận phúc lợi này?</string>
+    <string name="get_gift_not_found_failed_title">Không tìm được thông tin phúc lợi trên Mart</string>
+    <string name="get_gift_failed_title">Nhận phúc lợi không được</string>
+    <string name="get_gift_failed_desc">Vui lòng kiểm tra lại hoặc liên hệ với DVĐT.</string>
+    <string name="get_gift_congrats_title">Xin chúc mừng</string>
+    <string name="get_gift_congrats_desc">Bạn đã chọn nhận phúc lợi thành công.\nHãy liên hệ với DVĐT khi cần hỗ trợ.</string>
+    <string name="borrow_book">Mượn Sách</string>
+
+
+    <!-- Change password -->
+    <string name="change_password_sub">XIN VUI LÒNG NHẬP MẬT KHẨU MỚI</string>
+    <string name="old_password">Mật Khẩu Cũ</string>
+    <string name="password_placeholder">&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;</string>
+    <string name="new_password">Mật Khẩu Mới</string>
+    <string name="confirm_password">Xác Nhận Mật Khẩu</string>
+    <string name="change_password">Đổi Mật Khẩu</string>
+    <string name="change_password_error_not_match_title">Mật khẩu không khớp</string>
+    <string name="change_password_error_not_match_desc">Hãy nhập lại mật khẩu đúng với mật khẩu mới.</string>
+    <string name="change_password_error_title">Thất Bại</string>
+    <string name="change_password_error_desc">Không thể thay đổi được mật khẩu. Vui lòng thử lại sau.</string>
+    <string name="change_password_success_title">Chúc mừng</string>
+    <string name="change_password_success_desc">Bạn đã đổi mật khẩu thành công.</string>
+
+    <!--More-->
+    <string name="more_support">Hổ Trợ</string>
+    <string name="more_quick_ask">Hỏi Đáp Nhanh</string>
+    <string name="more_live_chat">Hổ Trợ Trực Tuyến</string>
+    <string name="faq">FAQ</string>
+    <string name="call_hotline">Tổng Đài</string>
+    <string name="setting">Cài Đặt</string>
+    <string name="more_personal_info">Thông Tin Cá Nhân</string>
+    <string name="more_connect_social">Kết Nối Mạng Xã Hội</string>
+    <string name="more_security">Bảo Mật</string>
+    <string name="more_show_hide_info">Ẩn/Hiện Thông Tin</string>
+    <string name="more_notification">Thông Báo</string>
+    <string name="more_favorite_project">Dự Án Quan Tâm</string>
+    <string name="more_password">Đổi Mật Khẩu</string>
+    <string name="more_logout">Thoát</string>
+    <string name="more_logout_question">Bạn muốn đăng xuất khỏi app MoBan.vn?</string>
+
+    <string name="delete_account_question">Bạn có chắc bạn muốn xóa tài khoản của mình khỏi MoBan.vn?</string>
+
+    <!-- New Post-->
+    <string name="new_post_image">Hình ảnh</string>
+    <string name="new_post_link_youtube">Link Youtube</string>
+    <string name="new_post_link_youtube_title">Link Youtube:</string>
+    <string name="new_post_topic">Topic</string>
+    <string name="new_post_topic_title">Topic:</string>
+    <string name="new_post_input_content">Nhập nội dung chia sẻ</string>
+    <string name="new_post_error_title">Không thể đăng bài viết</string>
+    <string name="new_post_error_empty_input">Bạn hãy nhập nội dung bài viết trước khi đăng.</string>
+    <string name="new_post_error_desc">Vui lòng thử lại sau.</string>
+
+    <!-- Badge Detail -->
+    <string name="badge_detail_title">Danh Hiệu</string>
+    <string name="badge_detail_mission">Nhiệm Vụ Để Nhận</string>
+
+    <!-- Mission Detail-->
+    <string name="mission_detail_description">Mô Tả Nhiệm Vụ</string>
+    <string name="mission_detail_rewards">Phần Thưởng Được Nhận</string>
+    <string name="mission_detail_coins_receive">Số Coin được nhận</string>
+    <string name="mission_detail_badge_receive">Huân chương nhận được</string>
+    <string name="mission_detail_badge_time">Thời Gian</string>
+
+    <!--- Account detail -->
+    <string name="account_detail_title">Tài Khoản</string>
+
+    <!-- Coin transaction-->
+    <string name="coin_transaction_title">Giao Dịch Điểm</string>
+    <string name="coin_transaction_change">Số Điểm Thay Đổi</string>
+    <string name="coin_transaction_info">Thông Tin</string>
+    <string name="coin_transaction_info_source">Nguồn</string>
+    <string name="coin_transaction_info_time">Thời gian</string>
+
+    <!-- Check in -->
+    <string name="check_in_success">CHECKIN THÀNH CÔNG</string>
+    <string name="check_in_success_desc">Cảm ơn bạn đã checkin.</string>
+    <string name="check_in_fail">Checkin không thành công</string>
+    <string name="check_in_fail_desc">Vui lòng kiểm tra và thử lại.</string>
+
+
+    <!-- Linkmart -->
+    <string name="link_mart">Mart</string>
+    <string name="purchased_product">Sản Phẩm Đã Mua</string>
+    <string name="favorite">Yêu Thích</string>
+    <string name="food">Ẩm Thực</string>
+    <string name="entertainment">Giải Trí</string>
+    <string name="shopping">Mua Sắm</string>
+    <string name="special_deal">Deal Đặc Biệt</string>
+    <string name="new_deal">Deal Mới</string>
+    <string name="popular_deal">Deal Nổi Bật</string>
+    <string name="view_all">Xem Tất Cả</string>
+    <string name="you_have_N_linkcoin">Bạn hiện có $N Điểm.</string>
+    <string name="you_have_bought_N_product">Bạn đã mua $N sản phẩm.</string>
+    <string name="voucher">Voucher</string>
+    <string name="valid_to_date">Giá trị đến ngày</string>
+    <string name="empty_purchased_product">Hiện tại bạn chưa mua sản phẩm nào</string>
+    <string name="simple_price">1000 Điểm - </string>
+    <string name="book_deposit">Phí Cọc:</string>
+    <string name="my_reward">My Rewards</string>
+    <string name="received">Đã Nhận</string>
+    <string name="get_it">Nhận Ngay</string>
+    <string name="apply_now">Áp Dụng Ngay</string>
+
+    <!-- Linkmart detail-->
+    <string name="description_deal">Miêu Tả</string>
+    <string name="value_deal">Giá Trị</string>
+    <string name="range_deal">Phạm Vi Áp Dụng</string>
+    <string name="term_deal">Điều Khoản Sử Dụng</string>
+    <string name="support_deal">Hổ Trợ</string>
+    <string name="buy_it">Mua Hàng</string>
+    <string name="call_center">Tổng Đài Hỗ Trợ</string>
+
+    <!--- Linkmart list -->
+    <string name="deal_type">Ngành Hàng</string>
+    <string name="order">Sắp Xếp</string>
+    <string name="popular">Phổ Biến</string>
+
+    <!-- Edit Post -->
+    <string name="edit_post">Cập Nhật</string>
+    <string name="edit_post_error_title">Không thể cập nhật bài viết</string>
+    <string name="delete">Xóa</string>
+
+    <string name="delete_post">Xóa Bài Viết</string>
+    <string name="delete_post_error_title">Không thể xóa bài viết</string>
+    <string name="delete_post_comfirm">Bạn có chắc muốn xóa bài viết này?</string>
+
+    <!-- Purchase Linkmart-->
+    <string name="purchase_successfully_title">Mua Hàng Thành Công</string>
+    <string name="purchase_successfully_desc">Chúc mừng bạn đã mua hàng thành công. Bộ phận DVĐT sẽ liên hệ với bạn sớm nhất. \nXin cảm ơn!</string>
+    <string name="purchase_failed_title">Mua hàng không thành công</string>
+    <string name="purchase_failed_desc">Vùi lòng kiểm tra và thử lại!</string>
+    <string name="purchase_failed_no_enough_title">Mua Hàng Không Thành Công</string>
+    <string name="purchase_failed_no_enough_desc">Rất Tiếc! Bạn chưa đủ Điểm để mua.\nCố gắng cày thêm Điểm bạn nhé!</string>
+
+    <!-- booking -->
+    <string name="project_booking_title">Danh Sách Book Căn</string>
+    <string name="bookings_apartment">Căn Đang Book</string>
+    <string name="out_of_time">Đã Hết Hạn</string>
+    <string name="booking_completed_title">Xin chúc mừng</string>
+    <string name="booking_completed_desc">Để hoàn tất giao dịch, bạn có 30 phút để cập nhật phiếu đặt chỗ và phiếu thu.\n Bạn có muốn thực hiện ngay không?</string>
+    <string name="booking_failed_title">Book căn thất bại</string>
+    <string name="booking_failed_desc">Vui lòng thử lại sau</string>
+
+    <!--- Reservation -->
+    <string name="reservation">Booking</string>
+    <string name="reservation_birthday_input">Nhập Ngày Sinh</string>
+    <string name="reservation_require_info">Nhu Cầu Thông Tin Dự Án</string>
+    <string name="reservation_product_require">Nhu Cầu Sản Phẩm</string>
+    <string name="reservation_select_require">Chọn Nhu Cầu</string>
+    <string name="reservation_product_require_input">Nhập Nhu Cầu Sản Phẩm</string>
+    <string name="reservation_product_require_input_alternative">Ghi Chú (nếu có)</string>
+    <string name="reservation_range_require">Diện Tích Sản Phẩm Mong Muốn</string>
+    <string name="reservation_range_require_input">Nhập Diện Tích Sản Phẩm Mong Muốn</string>
+    <string name="reservation_other_require">Nhu Cầu Khác</string>
+    <string name="reservation_other_require_input">Nhập Nhu Cầu Khác</string>
+    <string name="reservation_payment_method">Hình Thức Thanh Toán</string>
+    <string name="payment_cash">Tiền Mặt / Cà Thẻ</string>
+    <string name="payment_banking">Chuyển khoản</string>
+    <string name="reservation_booking_invoice">Phiếu Đặt Chổ</string>
+    <string name="reservation_cash_invoice">Phiếu Thu</string>
+    <string name="reservation_multiple_invoices">Phiếu Thu/\nXNCK/\nUNC</string>
+    <string name="add_image">Tải Hình Lên</string>
+    <string name="identity_require">CMND (*)</string>
+    <string name="identity_require_text">CMND / Passport *</string>
+    <string name="back_identity_require">Mặt Sau CMND (*)</string>
+    <string name="back_identity">Mặt Sau</string>
+    <string name="front_identity">Mặt Trước</string>
+    <string name="phone_input_require">Điện Thoại *</string>
+    <string name="delegate_invoice_require">Ủy Nhiệm Chi (*)</string>
+    <string name="reservation_now">Book Ngay</string>
+    <string name="reservation_update">Cập nhật thông tin</string>
+    <string name="error_name_empty_title">Bạn chưa nhập tên khách</string>
+    <string name="error_name_empty_desc">Vui lòng nhập Tên Khách để Đặt Chỗ.</string>
+    <string name="error_customer_info_empty_title">Bạn chưa nhập đủ thông tin khách</string>
+    <string name="error_customer_info_empty_desc">Vui lòng nhập đầy đủ Thông Tin Khách để hoàn tất Đặt Chỗ.</string>
+    <string name="error_customer_contact_empty_title">Bạn chưa nhập đủ thông tin liên hệ</string>
+    <string name="error_customer_contact_empty_desc">Vui lòng nhập đầy đủ Thông Tin Liên Hệ của khách để hoàn tất Đặt Chỗ.</string>
+    <string name="error_phone_invalid_title">Số điện thoại không hợp lệ</string>
+    <string name="error_phone_invalid_desc">Vui lòng nhập đúng Số Điện Thoại (10 &#8211; 11 chữ số).</string>
+    <string name="error_email_invalid_title">Email không hợp lệ</string>
+    <string name="error_email_invalid_desc">Vui lòng nhập đúng Email của khách hàng.</string>
+    <string name="error_money_invalid_title">Số tiền đặt chố không hợp lệ</string>
+    <string name="error_money_invalid_desc">Vui lòng nhập số tiền khách đặt chỗ.</string>
+    <string name="error_payment_empty_title">Bạn chưa chọn hình thức thanh toán</string>
+    <string name="error_payment_empty_desc">Vui lòng chọn Hình Thức Thanh Toán và tải lên những thông tin cần thiết.</string>
+    <string name="error_images_empty_title">Bạn chưa cập nhật tài liệu cần thiết</string>
+    <string name="error_images_empty_desc">Vui lòng tải lên những thông tin cần thiết để xác nhận giao dịch.</string>
+    <string name="error_image_delegate_empty_title">Bạn chưa xác nhận uỷ nhiệm chi</string>
+    <string name="error_image_delegate_empty_desc">Vui lòng chọn cập nhật Uỷ Nhiệm Chi để hoàn tất Đặt Chỗ.</string>
+    <string name="error_upload_image_failed_title">Tải hình lên thất bại</string>
+    <string name="error_upload_image_failed_desc">Không thể tải ảnh lúc này, vui lòng thử lại sau.</string>
+    <string name="error_new_reservation_failed_title">Tạo đặt chỗ thất bại</string>
+    <string name="error_new_reservation_failed_desc">Không thể đặt chỗ lúc này, vui lòng thử lại sau.</string>
+    <string name="error_update_reservation_failed_title">Cập nhật đặt chỗ thất bại</string>
+    <string name="error_update_reservation_failed_desc">Không thể cập nhật đặt chỗ lúc này, vui lòng thử lại sau.</string>
+    <string name="error_missing_info">Thông Tin Chưa Đầy Đủ</string>
+    <string name="error_missing_interest_desc">Vui lòng chọn đầy đủ Nhu Cầu của khách cho việc Đặt Chỗ</string>
+    <string name="error_missing_interest_deal_desc">Vui lòng chọn đầy đủ Nhu Cầu Bắt Buộc (*) cho việc Đặt Chỗ cho Dự Án này</string>
+    <string name="new_reservation_action_title">Tiến Hành Đặt Chỗ</string>
+    <string name="update_reservation_action_title">Cập Nhật Thông Tin Giao Dịch</string>
+    <string name="reservation_action_desc">Bạn có muốn $A với những thông tin đã nhập?</string>
+    <string name="reservation_confirmation">Xác nhận thông tin</string>
+    <string name="reservation_identity_title_require">Hình Ảnh Chứng Minh Nhân Dân / Passport *</string>
+    <string name="reservation_identity_title">Hình Ảnh Chứng Minh Nhân Dân / Passport</string>
+
+    <!-- Reservation List-->
+    <string name="reservation_list">Danh Sách Booking</string>
+    <string name="reservation_list_for_project_empty">Bạn chưa có booking nào cho dự án này</string>
+    <string name="reservation_list_empty">Bạn chưa có booking nào</string>
+    <string name="pending">Đang Chờ</string>
+    <string name="approve">Thành công</string>
+    <string name="denied">Đã từ chối</string>
+    <string name="waiting_fix">Đang chờ sửa</string>
+    <string name="date_book">Ngày Đặt Chỗ:</string>
+    <string name="reason_reject">Lý do: </string>
+
+    <!-- Review -->
+    <string name="review">Đánh Giá</string>
+    <string name="review_service">Đánh Giá Dịch Vụ</string>
+    <string name="review_description">Để Nâng Cao Chất Lượng Dich Vụ. MoBan.vn luôn muốn lắng nghe quý đối tác.</string>
+    <string name="review_now">Đánh Giá Ngay</string>
+    <string name="reviewed">Đã Đánh Giá</string>
+    <string name="my_review">Đánh giá của tôi</string>
+
+    <string name="rating_juridical">Pháp lý Dự án</string>
+    <string name="rating_host_trust">Uy tín Chủ đầu tư</string>
+    <string name="rating_location">Vị trí</string>
+    <string name="rating_price">Giá bán</string>
+    <string name="rating_design_utility">Thiết kế &amp; Tiện ích</string>
+
+    <!-- Lixi -->
+    <string name="lixi_receiver">Người Nhận</string>
+    <string name="lixi_receiver_placeholder">VD: Nguyễn Văn A</string>
+    <string name="lixi_num_lhc">Số Điểm</string>
+    <string name="lixi_num_lhc_placeholder">Nhập số Điểm</string>
+    <string name="lixi_note">Lời Nhắn (nếu có)</string>
+    <string name="send_lixi">Chuyển Điểm</string>
+    <string name="lixi_history">Lịch Sử Điểm</string>
+    <string name="linkpoint_history">Lịch Sử LinkPoint</string>
+    <string name="error_empty_receiver_lixi">Bạn hãy chọn Người Nhận Điểm</string>
+    <string name="error_input_lixi">Thông tin không hợp lệ</string>
+    <string name="error_input_lixi_lhc">Bạn phải chuyển ít nhât 1 Điểm</string>
+    <string name="congrats">Xin chúc mừng</string>
+    <string name="want_resent_lixi">Bạn có muốn chuyển Điểm lại không?</string>
+    <string name="error_lixi">Chuyển Điểm không được</string>
+    <string name="resend_lixi">Chuyển Điểm lại</string>
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
+
+    <!-- Secondary -->
+    <string name="okr">OKR</string>
+    <string name="secondary">Thứ Cấp</string>
+    <string name="insurance">Bảo Hiểm</string>
+    <string name="furniture">Nội Thất</string>
+    <string name="service">Dịch Vụ</string>
+    <string name="service_title">Booking Dịch Vụ</string>
+    <string name="event">Sự Kiện</string>
+    <string name="has_num_secondary_projects">Có $N bất động sản.</string>
+    <string name="num_of_beds">Số Phòng Ngủ</string>
+    <string name="structure">Kết Cấu</string>
+    <string name="garden">Sân</string>
+    <string name="direction">Hướng Nhà</string>
+    <string name="contact">Liên Hệ</string>
+    <string name="favorite_secondary">Bất Động Sản Nổi Bật</string>
+
+    <string name="create_new_bds">Tạo Ký Gửi</string>
+    <string name="require_info">Thông Tin Bắt Buộc *</string>
+    <string name="address_bds">Địa Chỉ Bất Động Sản</string>
+    <string name="address_correctly">Địa Chỉ Chính Xác (*)</string>
+    <string name="input_address_correctly">Nhập Địa Chỉ</string>
+    <string name="please_select">Vui lòng chọn</string>
+    <string name="short_title">Tiêu Đề Ngắn</string>
+    <string name="short_title_placeholder">Nhập Tiêu Đề</string>
+    <string name="total_area">Tổng Diện Tích Sử Dụng</string>
+    <string name="total_area_placeholder">Diện Tích (m2)</string>
+    <string name="purpose_bds">Mục Đích Ký Gửi</string>
+    <string name="select_purpose">Chọn Mục Đích</string>
+    <string name="type_bds">Loại Hình Bất Động Sản</string>
+    <string name="select_type_bds">Chọn Loại Hình</string>
+    <string name="price_bds">Giá Bất Động Sản</string>
+    <string name="price_bds_placeholder">Nhập Giá</string>
+    <string name="fee_bds">Phí Cho Đối Tác Bán</string>
+    <string name="fee_bds_placeholder">Nhập Phí</string>
+    <string name="fee_owner">Phí Hoa Hồng Chủ BĐS Chia Sẻ</string>
+    <string name="fee_owner_placeholder">Nhập Phí Hoa Hồng</string>
+    <string name="advance_info">Thông Tin Nâng Cao</string>
+    <string name="project_code_or_name">Dự Án</string>
+    <string name="project_code_or_name_placeholder">Chọn Dự Án</string>
+    <string name="type_secondary">Hình Thức Ký Gửi</string>
+    <string name="type_secondary_placeholder">Chọn Hình Thức Ký Gửi</string>
+    <string name="texture">Kết Cấu</string>
+    <string name="texture_placeholder">VD: 1 Trệt 1 Lầu</string>
+    <string name="no_hau">Nở Hậu (m)</string>
+    <string name="no_hau_placeholder">Nhập Số M Nở Hậu</string>
+    <string name="main_direction">Hướng Chính Của BĐS</string>
+    <string name="select_main_direction">Chọn Hướng</string>
+    <string name="place_area">Diện Tích Đất (m2)</string>
+    <string name="place_area_placeholder">Nhập Diện Tích Đất</string>
+    <string name="construction_area">Diện Tích Xây Dựng (m2)</string>
+    <string name="construction_area_placeholder">Nhập Diện Tích Xây Dựng</string>
+    <string name="street_front_house">Đường Trước Nhà (m)</string>
+    <string name="street_front_house_placeholder">Nhập Chiều Rộng Của Đường</string>
+    <string name="num_wc">Số Phòng WC</string>
+    <string name="num_wc_placeholder">Nhập Số Phòng WC</string>
+    <string name="favorite_point">Đặc Điểm Nổi Bật</string>
+    <string name="favorite_point_placeholder">Nhập Đặc Điểm Nổi Bật</string>
+    <string name="num_of_beds_placeholder">Nhập Số Phòng Ngủ</string>
+
+    <string name="secondary_images">Hình Ảnh</string>
+    <string name="secondary_images_doc_quyen">Ảnh Giấy Tờ Chủ Quyền Và Hợp Đồng (*)</string>
+    <string name="secondary_mics">Nội Thất</string>
+    <string name="secondary_utilities">Tiện Ích</string>
+
+    <string name="master_images">Ảnh Giấy Tờ Chủ Quyền *</string>
+    <string name="kind_bds">Hình Thức Ký Gửi</string>
+    <string name="kind_bds_placeholder">Chọn Hình Thức Ký Gửi</string>
+    <string name="time_meet">Khung Giờ Gặp Chủ Nhà</string>
+    <string name="time_meet_placeholder">Chọn Khung Giờ Gặp Chủ Nhà</string>
+    <string name="ask_confirm">Yêu Cầu Xác Minh *</string>
+    <string name="confirmation">Xác minh</string>
+    <string name="confirm_later">Để sau</string>
+
+    <string name="address_bds_title">Địa Chỉ Bất Động Sản</string>
+    <string name="info_bds_title">Thông Tin Bất Động Sản</string>
+    <string name="images_utilities">Hình Ảnh - Tiện Ích</string>
+    <string name="confirmation_bds">Xác Nhận Thông Tin</string>
+    <string name="main_photo">Ảnh Chính</string>
+    <string name="make_main_photo">Đặt Làm Ảnh Chính</string>
+    <string name="delete_photo">Xóa Ảnh</string>
+    <string name="select_unit_price_title">Chọn Đơn Vị Giá</string>
+    <string name="select_type_bds_title">Chọn Loại Hình Bất Động Sản</string>
+    <string name="select_purpose_title">Chọn Mục Đích</string>
+    <string name="select_project_title">Chọn Dự Án</string>
+    <string name="select_direction_title">Chọn Hướng</string>
+    <string name="upload_image_error_title">Không thể thêm ảnh. Vui lòng thử lại sau.</string>
+
+    <!-- Review -->
+    <string name="review_is_not_rating_title">Bạn chưa chọn điểm đánh giá</string>
+    <string name="review_is_not_rating_desc">Vui lòng chọn điểm đánh giá trước khi gửi cho Admin</string>
+    <string name="review_success_title">Đánh giá thành công</string>
+    <string name="review_success_desc">Cảm ơn bạn đã gửi đánh giá!</string>
+    <string name="review_fail_title">Không thể gửi đánh giá</string>
+    <string name="review_fail_desc">Vui lòng kiểm ra thông tin và thử lại</string>
+    <string name="load_review_fail_title">Không thể lấy thông tin đánh giá</string>
+    <string name="load_review_fail_desc">Vui lòng thử lại sau.</string>
+
+    <!-- Register -->
+    <string name="register_title">Đăng Ký Mới</string>
+    <string name="full_name_require">Họ Và Tên *</string>
+    <string name="full_name_hint">Nhập Họ Và Tên</string>
+    <string name="email_require">Email *</string>
+    <string name="email_hint">Nhập Email</string>
+    <string name="phone_require">Số Điện Thoại *</string>
+    <string name="phone_hint">Nhập Số Điện Thoại</string>
+    <string name="reference">Nguồn Giới Thiệu</string>
+    <string name="reference_select">Chọn Nguồn Giới Thiệu</string>
+    <string name="referer">Người Giới Thiệu</string>
+    <string name="referer_select">Chọn Người Giới Thiệu</string>
+    <string name="director_require">Người Hỗ Trợ *</string>
+    <string name="director_hint">Chọn Agent Service</string>
+    <string name="register">Đăng Ký</string>
+    <string name="error_register_name_empty">Bạn chưa nhập Họ tên</string>
+    <string name="error_register_name_empty_desc">Vui lòng nhập đầy đủ Họ và Tên của bạn</string>
+    <string name="error_register_email_invalid">Email không hợp lệ</string>
+    <string name="error_register_email_invalid_desc">Vui lòng nhập đúng Email của bạn</string>
+    <string name="error_register_phone_invalid">Số điện thoại không hợp lệ</string>
+    <string name="error_register_phone_invalid_desc">Vui lòng nhập đúng Số Điện Thoại (Từ 10 đến 13 chữ số)</string>
+    <string name="error_register_director_invalid">Bạn chưa chọn Giám Đốc</string>
+    <string name="error_register_director_invalid_desc">Vui lòng Chọn Giám Đốc để đăng ký làm đối tác</string>
+    <string name="error_register_failed">Không thể thực hiện đăng ký làm đối tác. Vui lòng liên hệ với admin để được hổ trợ.</string>
+    <string name="register_congrats_title">Chúc Mừng</string>
+    <string name="register_otp_confirmation">Mã Xác Nhận sẽ được gửi đến số điện thoại của bạn:</string>
+    <string name="otp_hint">Mã OTP</string>
+    <string name="password_hint">Mật Khẩu</string>
+    <string name="password_confirmation_hint">Nhập Lại Mật Khẩu</string>
+    <string name="register_confirmation">Hoàn Tất Đăng Ký</string>
+
+    <string name="error_register_otp_empty">Chưa nhập mã xác thực</string>
+    <string name="error_register_otp_empty_desc">Vui lòng nhập mã xác thực được gửi tới điện thoại của bạn</string>
+    <string name="error_register_password_not_match">Mật khẩu không khớp</string>
+    <string name="error_register_password_not_match_desc">Vui lòng nhập và xác nhận chính xác mật khẩu mới của bạn</string>
+    <string name="error_register_password_empty">Chưa nhập mật khẩu</string>
+    <string name="error_register_password_empty_desc">Vui lòng nhập mật khẩu và xác nhận để hoàn tất</string>
+    <string name="register_confirmation_success">Bạn đã đăng ký đối tác thành công.</string>
+
+    <string name="verify_phone_title">Xác Nhận Số Điện Thoại</string>
+    <string name="verify_phone_confirmation">Xác nhận Số Điện Thoại của bạn để có thể đăng nhập dễ dàng hơn.</string>
+    <string name="verify_phone_confirmation_sms">Hãy nhập Mã Xác Nhận sẽ được gửi đến số điện thoại của bạn:</string>
+</resources>

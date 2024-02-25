@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/textlines">
+
+    <TextView
+        android:id="@+id/item_dialog_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:textAppearance="@style/Regular"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/normal_font_size" />
+
+</RelativeLayout>

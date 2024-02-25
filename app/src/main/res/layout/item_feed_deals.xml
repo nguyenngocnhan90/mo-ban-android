@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/item_feed_deals_content"
+        android:layout_alignEnd="@id/item_feed_deals_content"
+        android:layout_alignStart="@id/item_feed_deals_content"
+        android:layout_alignTop="@+id/item_feed_deals_content"
+        android:background="@drawable/splash"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/item_feed_deals_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="@string/deal_today"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_font_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/color_green_border"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text="@string/flat_id"
+                android:textAlignment="center"
+                android:textAppearance="@style/Bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_font_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center_vertical"
+                android:text="@string/project"
+                android:textAppearance="@style/Bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_font_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text="@string/status"
+                android:textAlignment="center"
+                android:textAppearance="@style/Bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_font_size" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/item_feed_deals_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/item_feed_deals_tv_view_detail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="@string/view_detail"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_font_size" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

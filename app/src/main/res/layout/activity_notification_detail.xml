@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorAccent"
+    tools:context="com.moban.flow.notification.NotificationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/notification_detail_tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/notification_detail_nav"
+            layout="@layout/nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/notification_detail_content_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/notification_detail_tbToolbar"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/notification_detail_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:textAppearance="@style/Medium"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/normal_font_size" />
+
+        <TextView
+            android:id="@+id/notification_detail_tv_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/color_black_60"
+            android:textSize="@dimen/normal_font_size" />
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/notification_detail_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/notification_detail_tbToolbar"
+        android:visibility="gone" />
+
+</RelativeLayout>

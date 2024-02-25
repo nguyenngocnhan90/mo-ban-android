@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/sort_project_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/sort_project_img_hot"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/color_menu_selected"
+            android:src="@drawable/sort_hot" />
+
+        <TextView
+            android:id="@+id/sort_project_tv_hot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/sort_hot"
+            android:textColor="@color/color_menu_selected"
+            android:textSize="@dimen/large_font_size" />
+
+        <ImageView
+            android:id="@+id/sort_project_img_check_hot"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/sort_checked" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_black_10" />
+
+    <LinearLayout
+        android:id="@+id/sort_project_latest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/sort_project_img_latest"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/color_black"
+            android:src="@drawable/sort_newest" />
+
+        <TextView
+            android:id="@+id/sort_project_tv_latest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/sort_latest"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/large_font_size" />
+
+        <ImageView
+            android:id="@+id/sort_project_img_check_latest"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/sort_checked" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_black_10" />
+
+    <LinearLayout
+        android:id="@+id/sort_project_reward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/sort_project_img_reward"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/color_black"
+            android:src="@drawable/sort_reward" />
+
+        <TextView
+            android:id="@+id/sort_project_tv_reward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/sort_reward"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/large_font_size" />
+
+        <ImageView
+            android:id="@+id/sort_project_img_check_reward"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/sort_checked" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_black_10" />
+
+    <LinearLayout
+        android:id="@+id/sort_project_asc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/sort_project_img_asc"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/color_black"
+            android:src="@drawable/sort_down" />
+
+        <TextView
+            android:id="@+id/sort_project_tv_asc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/sort_rate_asc"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/large_font_size" />
+
+        <ImageView
+            android:id="@+id/sort_project_img_check_asc"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/sort_checked" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_black_10" />
+
+    <LinearLayout
+        android:id="@+id/sort_project_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/sort_project_img_desc"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/color_black"
+            android:src="@drawable/sort_up" />
+
+        <TextView
+            android:id="@+id/sort_project_tv_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/sort_rate_asc"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/large_font_size" />
+
+        <ImageView
+            android:id="@+id/sort_project_img_check_desc"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/sort_checked" />
+
+    </LinearLayout>
+
+</LinearLayout>

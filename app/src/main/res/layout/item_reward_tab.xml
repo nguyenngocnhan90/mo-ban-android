@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/color_porcelain"
+    android:baselineAligned="true"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/reward_tab_btn_report"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:text="@string/reward_report"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/color_black_60"
+            android:textSize="@dimen/normal_font_size" />
+
+        <ImageView
+            android:id="@+id/reward_tab_img_report"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/select_up_arrow" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/reward_tab_view_level"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/reward_tab_btn_level"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:text="@string/reward_level"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/color_black_60"
+            android:textSize="@dimen/normal_font_size" />
+
+        <ImageView
+            android:id="@+id/reward_tab_img_level"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/select_up_arrow" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/reward_tab_btn_badge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:text="@string/reward_badge"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/color_black_60"
+            android:textSize="@dimen/normal_font_size" />
+
+        <ImageView
+            android:id="@+id/reward_tab_img_badge"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/select_up_arrow" />
+
+    </RelativeLayout>
+
+</LinearLayout>

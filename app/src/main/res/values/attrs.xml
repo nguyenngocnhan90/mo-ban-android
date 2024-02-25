@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TintableImageView">
+        <attr name="tintable" format="reference|color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SpoilerTextView">
+        <attr name="trimLength" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="LevelProgressView">
+        <attr name="startPoint" format="integer"/>
+        <attr name="endPoint" format="integer"/>
+        <attr name="currentPoint" format="integer"/>
+    </declare-styleable>
+</resources>

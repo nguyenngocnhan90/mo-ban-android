@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/color_clear"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/item_revenue_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Doanh Thu Nhóm"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/color_black_60"
+            android:textSize="@dimen/normal_font_size" />
+
+        <TextView
+            android:id="@+id/item_revenue_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/normal_font_size" />
+
+    </LinearLayout>
+
+</FrameLayout>

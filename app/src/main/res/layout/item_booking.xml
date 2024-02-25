@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_porcelain"
+    android:orientation="horizontal">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/item_booking_img_media"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        app:civ_border_color="@color/color_background_gray"
+        app:civ_border_width="2dp" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_booking_tv_apartment_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/large_font_size" />
+
+        <TextView
+            android:id="@+id/item_booking_tv_apartment_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/large_font_size" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp">
+
+        <RelativeLayout
+            android:id="@+id/item_booking_remain_time"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible">
+
+            <ProgressBar
+                android:id="@+id/circle_count_down"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle_count_down_background"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circle_count_down_accent"
+                android:rotation="-90" />
+
+            <TextView
+                android:id="@+id/item_booking_tv_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textAlignment="center"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_black_60"
+                android:textSize="@dimen/detail_font_size" />
+
+        </RelativeLayout>
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/item_booking_lock"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="invisible">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:src="@drawable/apartment_lock" />-->
+
+        <!--</RelativeLayout>-->
+
+    </RelativeLayout>
+
+</LinearLayout>

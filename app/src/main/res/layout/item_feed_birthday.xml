@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:textAppearance="@style/Regular"
+        android:textSize="@dimen/large_font_size"
+        android:textColor="@color/color_black"
+        android:text="@string/feed_birthday_today"
+        android:height="40dp"
+        android:gravity="center_vertical"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/bg_birthday">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:id="@+id/feed_birthday_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@color/color_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/feed_birthday_recycleView"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Regular"
+                android:textSize="20sp"
+                android:textColor="@color/color_black"
+                android:text="@string/feed_birthday"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Regular"
+                android:textSize="@dimen/large_font_size"
+                android:textColor="@color/color_black"
+                android:text="@string/feed_send_birthday"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

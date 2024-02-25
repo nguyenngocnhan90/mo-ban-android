@@ -1,0 +1,353 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.moban.flow.projectdetail.bookingdetail.BookingDetailActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/booking_detail_tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/booking_detail_nav"
+            layout="@layout/nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/booking_detail_tbToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_porcelain"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <ProgressBar
+                    android:id="@+id/booking_detail_circle_count_down"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_count_down_background"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/circle_count_down_red"
+                    android:rotation="-90" />
+
+                <TextView
+                    android:id="@+id/booking_detail_tv_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/project_detail_transaction_end_time"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black_60"
+                    android:textSize="@dimen/medium_font_size" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/booking_detail_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/item_booking_detail_generate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/background_white_round_4"
+                        android:elevation="3dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_gray_background_50"
+                            android:paddingBottom="15dp"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="20dp"
+                            android:paddingTop="15dp"
+                            android:text="@string/project_detail_customer_detail"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/detail_font_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="18dp"
+                            android:paddingTop="18dp"
+                            android:paddingEnd="20dp"
+                            android:paddingStart="20dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="@string/project_detail_customer_name"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/booking_detail_customer_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="18dp"
+                            android:paddingTop="18dp"
+                            android:paddingEnd="20dp"
+                            android:paddingStart="20dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="@string/project_detail_customer_phone"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/booking_detail_customer_phone"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="18dp"
+                            android:paddingTop="18dp"
+                            android:paddingEnd="20dp"
+                            android:paddingStart="20dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="@string/identity_passport"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/booking_detail_customer_cmmd_passport"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="18dp"
+                            android:paddingTop="18dp"
+                            android:paddingEnd="20dp"
+                            android:paddingStart="20dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="@string/birthday"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/booking_detail_customer_birthday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:id="@+id/booking_detail_view_cmnd_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingStart="20dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:text="@string/identity_passport"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_weight="7">
+
+                                <ImageView
+                                    android:id="@+id/booking_detail_img_booking_invoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="150dp"
+                                    android:scaleType="centerCrop"
+                                    android:layout_centerHorizontal="true" />
+
+                                <Button
+                                    android:id="@+id/booking_detail_btn_booking_cmnd"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:text="@string/plus"
+                                    android:textAlignment="center"
+                                    android:textAppearance="@style/Light"
+                                    android:textColor="@color/color_porcelain"
+                                    android:textSize="60sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:id="@+id/booking_detail_view_invoice_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingStart="20dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:text="@string/reservation_multiple_invoices"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_weight="7">
+
+                                <ImageView
+                                    android:id="@+id/booking_detail_img_invoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="150dp"
+                                    android:scaleType="centerCrop"
+                                    android:layout_centerHorizontal="true" />
+
+                                <Button
+                                    android:id="@+id/booking_detail_btn_invoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:text="@string/plus"
+                                    android:textAlignment="center"
+                                    android:textAppearance="@style/Light"
+                                    android:textColor="@color/color_porcelain"
+                                    android:textSize="60sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

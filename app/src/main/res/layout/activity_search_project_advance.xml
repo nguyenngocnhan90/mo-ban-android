@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.moban.flow.projects.searchprojectadvance.SearchProjectAdvanceActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/search_advance_tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/search_advance_nav"
+            layout="@layout/nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/search_advance_btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_gradient"
+        android:text="@string/search"
+        android:textAppearance="@style/Bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_font_size" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/search_advance_btn_search"
+        android:layout_below="@id/search_advance_tbToolbar"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/search_advance_btn_clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_gray_background_50"
+                android:paddingEnd="20dp"
+                android:paddingStart="0dp"
+                android:text="@string/delete_search"
+                android:textAlignment="textEnd"
+                android:textAllCaps="true"
+                android:textAppearance="@style/Bold"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/detail_font_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp"
+                android:text="@string/project_type"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/large_font_size" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="0dp">
+
+                    <RelativeLayout
+                        android:id="@+id/search_advance_box_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/search_advance_btn_all"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/background_circle_dark"
+                            android:text="@string/all"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/detail_font_size" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_advance_btn_all"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/all"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/detail_font_size" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/search_advance_box_villas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_villas"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/background_circle_border"
+                            android:scaleType="center"
+                            android:src="@drawable/search_villas"
+                            android:tint="@color/color_black" />
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_check_villas"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="-20dp"
+                            android:layout_toEndOf="@id/search_advance_img_villas"
+                            android:src="@drawable/icon_check_selected"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_advance_img_villas"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/villa"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/detail_font_size" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/search_advance_box_house"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_house"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/background_circle_border"
+                            android:scaleType="center"
+                            android:src="@drawable/search_house"
+                            android:tint="@color/color_black" />
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_check_house"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="-20dp"
+                            android:layout_toEndOf="@id/search_advance_img_house"
+                            android:src="@drawable/icon_check_selected"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_advance_img_house"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/nha_pho"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/detail_font_size" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/search_advance_box_apartment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_apartment"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/background_circle_border"
+                            android:scaleType="center"
+                            android:src="@drawable/search_apartment"
+                            android:tint="@color/color_black" />
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_check_apartment"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="-20dp"
+                            android:layout_toEndOf="@id/search_advance_img_apartment"
+                            android:src="@drawable/icon_check_selected"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_advance_img_apartment"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/can_ho"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/detail_font_size" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/search_advance_box_dat_nen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_dat_nen"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/background_circle_border"
+                            android:scaleType="center"
+                            android:src="@drawable/search_dat_nen"
+                            android:tint="@color/color_black" />
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_check_dat_nen"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="-20dp"
+                            android:layout_toEndOf="@id/search_advance_img_dat_nen"
+                            android:src="@drawable/icon_check_selected"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_advance_img_dat_nen"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/dat_nen"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/detail_font_size" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/search_advance_box_shop_house"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_shop_house"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/background_circle_border"
+                            android:scaleType="center"
+                            android:src="@drawable/search_shophouse"
+                            android:tint="@color/color_black" />
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_check_shop_house"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="-20dp"
+                            android:layout_toEndOf="@id/search_advance_img_shop_house"
+                            android:src="@drawable/icon_check_selected"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_advance_img_shop_house"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/shop_house"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/detail_font_size" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/search_advance_box_condotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_condotel"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/background_circle_border"
+                            android:scaleType="center"
+                            android:src="@drawable/search_condotel"
+                            android:tint="@color/color_black" />
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_check_condotel"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="-20dp"
+                            android:layout_toEndOf="@id/search_advance_img_condotel"
+                            android:src="@drawable/icon_check_selected"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_advance_img_condotel"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/condotel"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/detail_font_size" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/search_advance_box_office_tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_office_tel"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/background_circle_border"
+                            android:scaleType="center"
+                            android:src="@drawable/search_officetel"
+                            android:tint="@color/color_black" />
+
+                        <ImageView
+                            android:id="@+id/search_advance_img_check_office_tel"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="-20dp"
+                            android:layout_toEndOf="@id/search_advance_img_office_tel"
+                            android:src="@drawable/icon_check_selected"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/search_advance_img_office_tel"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/office_tel"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/detail_font_size" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_background_50" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="@string/project_hosting"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black_60"
+                    android:textSize="@dimen/large_font_size" />
+
+                <TextView
+                    android:id="@+id/search_advance_tv_host"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/select"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/large_font_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/arrow_down" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_background_50" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="@string/city"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black_60"
+                    android:textSize="@dimen/large_font_size" />
+
+                <TextView
+                    android:id="@+id/search_advance_tv_city"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/select"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/large_font_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/arrow_down" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_background_50" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="@string/district"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black_60"
+                    android:textSize="@dimen/large_font_size" />
+
+                <TextView
+                    android:id="@+id/search_advance_tv_district"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/select"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/large_font_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/arrow_down" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_background_50" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black_60"
+                    android:textSize="@dimen/large_font_size" />
+
+                <TextView
+                    android:id="@+id/search_advance_tv_price_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/select"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/large_font_size" />
+
+                <com.jaygoo.widget.RangeSeekBar
+                    android:id="@+id/search_advancer_seekbar_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    app:rsb_max="40"
+                    app:rsb_min="0"
+                    app:rsb_mode="range"
+                    app:rsb_progress_color="@color/colorAccent"
+                    app:rsb_progress_height="5dp"
+                    app:rsb_range_interval="1"
+                    app:rsb_thumb_drawable="@drawable/seek_progress_indicator"
+                    app:rsb_thumb_inactivated_drawable="@drawable/seek_progress_indicator"
+                    app:rsb_thumb_scale_ratio="1.2"
+                    app:rsb_thumb_size="16dp"
+                    app:rsb_tick_mark_number="40" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_background_50" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fee_project"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black_60"
+                    android:textSize="@dimen/large_font_size" />
+
+                <TextView
+                    android:id="@+id/search_advance_tv_fee_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/select"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/large_font_size" />
+
+                <com.jaygoo.widget.RangeSeekBar
+                    android:id="@+id/search_advancer_seekbar_fee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    app:rsb_max="20"
+                    app:rsb_min="1"
+                    app:rsb_mode="range"
+                    app:rsb_progress_color="@color/colorAccent"
+                    app:rsb_progress_height="5dp"
+                    app:rsb_range_interval="1"
+                    app:rsb_thumb_drawable="@drawable/seek_progress_indicator"
+                    app:rsb_thumb_inactivated_drawable="@drawable/seek_progress_indicator"
+                    app:rsb_thumb_scale_ratio="1.2"
+                    app:rsb_thumb_size="16dp"
+                    app:rsb_tick_mark_number="19" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

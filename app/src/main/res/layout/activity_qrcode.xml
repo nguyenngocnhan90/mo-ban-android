@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.moban.flow.qrcode.QRCodeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/post_detail_tbToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStart="0dp">
+
+            <include
+                android:id="@+id/qr_code_nav"
+                layout="@layout/nav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white">
+
+            <TextView
+                android:id="@+id/qc_code_employee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:text="@string/qr_code_partner"
+                android:textAllCaps="true"
+                android:textAppearance="@style/Medium"
+                android:textColor="@color/color_black_60"
+                android:textSize="@dimen/medium_font_size" />
+
+            <TextView
+                android:id="@+id/qc_code_employee_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/qc_code_employee"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/qc_code_img"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_below="@id/qc_code_employee_code"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp" />
+
+            <Button
+                android:id="@+id/qc_code_btn_scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/background_gradient_round_4"
+                android:text="@string/scan_qr_code"
+                android:textAppearance="@style/Medium" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/qccode_progress"
+        android:layout_width="match_parent"
+        android:background="@color/color_recycler_background"
+        android:alpha="0.6"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</FrameLayout>

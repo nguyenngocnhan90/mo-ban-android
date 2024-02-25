@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/nav_tvCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/default_size"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Hủy"
+        android:textAppearance="@style/Regular"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/nav_new_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_size"
+        android:layout_toStartOf="@id/nav_tvOK"
+        android:layout_toEndOf="@id/nav_tvCancel"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/edit_post"
+        android:textAppearance="@style/Regular"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/title_font_size" />
+
+    <TextView
+        android:id="@+id/nav_tvOK"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/default_size"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Đăng"
+        android:textAppearance="@style/Medium"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp" />
+
+</RelativeLayout>

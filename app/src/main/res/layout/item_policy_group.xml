@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/color_text_field_bg">
+
+    <TextView
+        android:id="@+id/item_policy_group_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:text="Voucher 200.000 VND"
+        android:textAppearance="@style/Bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normal_font_size" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_policy_group_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

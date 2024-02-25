@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/item_secondary_project_imgMedia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark_15"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1">
+
+                <!--<TextView-->
+                <!--android:id="@+id/item_project_tv_favourite"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_marginEnd="5dp"-->
+                <!--android:background="@drawable/background_half_round_yellow_button"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingLeft="12dp"-->
+                <!--android:paddingRight="12dp"-->
+                <!--android:text="Nổi Bật"-->
+                <!--android:textAppearance="@style/Medium"-->
+                <!--android:textSize="@dimen/medium_font_size" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/item_project_tv_gift"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_toEndOf="@id/item_project_tv_favourite"-->
+                <!--android:background="@drawable/background_half_round_red_button"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingLeft="12dp"-->
+                <!--android:paddingRight="12dp"-->
+                <!--android:text="Thưởng"-->
+                <!--android:textAppearance="@style/Medium"-->
+                <!--android:textSize="@dimen/medium_font_size" />-->
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/item_secondary_project_tv_type_project"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_half_round_green_button"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/dat_nen"
+                android:textAppearance="@style/Medium"
+                android:textSize="@dimen/medium_font_size" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_secondary_project_tv_fee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:text="@string/fee_project"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_font_size" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:id="@+id/item_secondary_project_tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/Medium"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/large_font_size" />
+
+            <TextView
+                android:id="@+id/item_secondary_project_tvAddr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/normal_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+            <TextView
+                android:id="@+id/item_secondary_project_tvAgentRateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/price"
+                android:textAllCaps="true"
+                android:textAppearance="@style/Bold"
+                android:textColor="@color/color_green_border"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/item_secondary_project_tvAgentRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="12"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_green_border"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_background_gray" />
+
+</LinearLayout>
+

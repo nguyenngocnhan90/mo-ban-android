@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_project_imgMedia"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/item_project_imgMedia"
+            android:background="@color/colorPrimaryDark_80"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="% Ứng Phí"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/white_70"
+                    android:textSize="@dimen/medium_font_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="% Hoa Hồng"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/white_70"
+                    android:textSize="@dimen/medium_font_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Giá Sản Phẩm"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/white_70"
+                    android:textSize="@dimen/medium_font_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/item_project_tv_advance_rate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/large_font_size_24" />
+
+                <TextView
+                    android:id="@+id/item_project_tv_commission_rate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/large_font_size_24" />
+
+                <TextView
+                    android:id="@+id/item_project_tv_deal_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/large_font_size_24" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1">
+
+                <!--<TextView-->
+                <!--android:id="@+id/item_project_tv_favourite"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_marginEnd="5dp"-->
+                <!--android:background="@drawable/background_half_round_yellow_button"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingLeft="12dp"-->
+                <!--android:paddingRight="12dp"-->
+                <!--android:text="Nổi Bật"-->
+                <!--android:textAppearance="@style/Medium"-->
+                <!--android:textSize="@dimen/medium_font_size" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/item_project_tv_gift"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_toEndOf="@id/item_project_tv_favourite"-->
+                <!--android:background="@drawable/background_half_round_red_button"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingLeft="12dp"-->
+                <!--android:paddingRight="12dp"-->
+                <!--android:text="Thưởng"-->
+                <!--android:textAppearance="@style/Medium"-->
+                <!--android:textSize="@dimen/medium_font_size" />-->
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/item_project_tv_type_project"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_half_round_green_button"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="@string/dat_nen"
+                android:textAppearance="@style/Medium"
+                android:textSize="@dimen/medium_font_size" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:baselineAligned="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_project_tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Đại Phát Mall Town"
+                android:textAppearance="@style/Bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/large_font_size" />
+
+            <TextView
+                android:id="@+id/item_project_tvAddr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Tân Uyên - Bình Dương"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_black_50"
+                android:textSize="@dimen/medium_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_project_viewAgentRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+            <TextView
+                android:id="@+id/item_project_tvAgentRateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/confirmed_revenue_2_lines"
+                android:textAllCaps="true"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/colorAccent"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/item_project_tvAgentRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:text="12"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="5dp">
+
+        <TextView
+            android:id="@+id/item_project_tv_discount_service_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/Bold"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/large_font_size" />
+
+        <TextView
+            android:id="@+id/item_project_tv_service_fee_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="-"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/color_black_30"
+            android:textSize="@dimen/detail_font_size_10" />
+
+        <TextView
+            android:id="@+id/item_project_tv_service_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/color_black_30"
+            android:textSize="@dimen/detail_font_size_10" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/item_project_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_background_gray" />
+
+</LinearLayout>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Regular" parent="android:TextAppearance">
+        <item name="fontPath">@string/font_regular</item>
+    </style>
+    <style name="Medium" parent="android:TextAppearance">
+        <item name="fontPath">@string/font_medium</item>
+    </style>
+    <style name="Bold" parent="android:TextAppearance">
+        <item name="fontPath">@string/font_bold</item>
+    </style>
+    <style name="Light" parent="android:TextAppearance">
+        <item name="fontPath">@string/font_light</item>
+    </style>
+</resources>

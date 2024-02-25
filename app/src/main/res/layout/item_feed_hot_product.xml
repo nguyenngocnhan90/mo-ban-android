@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_text_field_bg"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/feed_hot_product_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:lines="1"
+            android:padding="10dp"
+            android:scrollHorizontally="true"
+            android:text="Dự án Hot"
+            android:textAppearance="@style/Bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_font_size" />
+
+        <TextView
+            android:id="@+id/feed_hot_product_btn_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:padding="10dp"
+            android:scrollHorizontally="true"
+            android:text="Tất cả"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/color_btn_deal"
+            android:textSize="@dimen/medium_font_size" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_feed_hot_product_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_block_data_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_gray_background_50"
+        android:paddingBottom="15dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Bold"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/detail_font_size" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_block_data_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp" />
+
+</LinearLayout>

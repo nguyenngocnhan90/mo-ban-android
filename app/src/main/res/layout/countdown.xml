@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/countdown_tv_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_dark_round_5"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="14"
+        android:textAlignment="center"
+        android:textAppearance="@style/Bold"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:textSize="@dimen/normal_font_size" />
+
+    <TextView
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text=":"
+        android:textSize="20sp"
+        android:textColor="@color/color_black_background"
+        android:textStyle="italic"
+        android:textAppearance="@style/Bold"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/countdown_tv_mins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_dark_round_5"
+        android:gravity="center"
+        android:padding="6dp"
+        android:textStyle="italic"
+        android:text="14"
+        android:textAlignment="center"
+        android:textAppearance="@style/Bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_font_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text=":"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:textSize="20sp"
+        android:textColor="@color/color_black_background"
+        android:textStyle="italic"
+        android:textAppearance="@style/Bold"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/countdown_tv_secs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_dark_round_5"
+        android:gravity="center"
+        android:padding="6dp"
+        android:textStyle="italic"
+        android:text="14"
+        android:textAlignment="center"
+        android:textAppearance="@style/Bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_font_size" />
+
+</LinearLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_white_round_4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/item_deal_view_project_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_deal_tv_project_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:paddingHorizontal="16dp"
+                android:textAppearance="@style/Bold"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/normal_font_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@color/color_background_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/item_deal_img_logo"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_deal_tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/Bold"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/normal_font_size" />
+
+                <TextView
+                    android:id="@+id/item_deal_tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black_60"
+                    android:textSize="@dimen/medium_font_size" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/item_deal_view_remain_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/item_deal_view_circle_time"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:visibility="invisible">
+
+                    <ProgressBar
+                        android:id="@+id/item_deal_circle_count_down"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_count_down_background"
+                        android:indeterminate="false"
+                        android:progressDrawable="@drawable/circle_count_down_accent"
+                        android:rotation="-90" />
+
+                    <TextView
+                        android:id="@+id/item_deal_tv_timer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/color_black_60"
+                        android:textSize="@dimen/detail_font_size" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/item_deal_lock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/out_of_time"
+                    android:textAppearance="@style/Bold"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/medium_font_size" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/item_deal_tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_black_60"
+                android:textSize="@dimen/normal_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="@string/deal_status_title"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_black_60"
+                android:textSize="@dimen/normal_font_size" />
+
+            <TextView
+                android:id="@+id/item_deal_tv_order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/Bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/normal_font_size" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_deal_view_order_num"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="Số thứ tự"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_black_60"
+                android:textSize="@dimen/normal_font_size" />
+
+            <TextView
+                android:id="@+id/item_deal_tv_order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:textSize="28sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/item_deal_tv_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="10dp"
+                android:text="@string/deal_cancel"
+                android:textAppearance="@style/Regular"
+                android:textColor="@color/color_red_15"
+                android:textSize="@dimen/medium_font_size"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_deal_view_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@color/color_background_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <RelativeLayout
+                    android:id="@+id/item_deal_btn_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="16dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/more" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/item_deal_btn_main_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/background_gradiant_button"
+                    android:gravity="center"
+                    android:paddingHorizontal="12dp"
+                    android:text="@string/project_detail_book_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

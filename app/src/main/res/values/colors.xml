@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5935CC</color>
+    <color name="colorPrimary70">#018a60</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryDark_30">#4D000000</color>
+    <color name="colorPrimaryDark_80">#CC000000</color>
+    <color name="colorPrimaryDark_60">#99000000</color>
+    <color name="colorPrimaryDark_50">#80000000</color>
+    <color name="colorPrimaryDark_15">#26000000</color>
+    <color name="colorPrimaryGray">#80000000</color>
+
+    <color name="colorAccent">#5935CC</color>
+    <color name="colorAccent_50">#805935CC</color>
+    <color name="colorAccent_10">#1A5935CC</color>
+
+    <color name="colorPrimaryDark70">#B33E495C</color>
+    <color name="colorPrimaryDark50">#989fa9</color>
+    <color name="colorPrimaryDark60">#f5f7f9</color>
+
+    <color name="colorNotification">#555555</color>
+    <color name="colorBackground">#05438D</color>
+    <color name="colorGrayBackground">#FEFEFE</color>
+    <!--100% — FF
+        95% — F2
+        90% — E6
+        85% — D9
+        80% — CC
+        75% — BF
+        70% — B3
+        65% — A6
+        60% — 99
+        55% — 8C
+        50% — 80
+        45% — 73
+        40% — 66
+        35% — 59
+        30% — 4D
+        25% — 40
+        20% — 33
+        15% — 26
+        10% — 1A
+        5% — 0D
+        0% — 00 -->
+
+    <!-- Global color-->
+    <color name="color_black">#000000</color>
+    <color name="color_black_4">#0B000000</color>
+    <color name="color_black_10">#1A000000</color>
+    <color name="color_black_20">#33000000</color>
+    <color name="color_black_30">#4D000000</color>
+    <color name="color_black_40">#4D000000</color>
+    <color name="color_black_50">#80000000</color>
+    <color name="color_black_60">#99000000</color>
+    <color name="color_black_10_2">#1A000000</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_white_10">#1AFFFFFF</color>
+    <color name="color_white_50">#80FFFFFF</color>
+    <color name="color_white_60">#99FFFFFF</color>
+    <color name="color_white_5">#0DFFFFFF</color>
+    <color name="color_red">#ff0000</color>
+    <color name="color_red_15">#FF2600</color>
+    <color name="color_red_10">#1Aff0000</color>
+    <color name="color_red_coin">#E74C3C</color>
+    <color name="color_clear">#00000000</color>
+    <color name="color_background_gray">#F0F0F0</color>
+    <color name="color_yellow_button">#E2B70D</color>
+    <color name="color_red_button">#C0392B</color>
+    <color name="color_text_field_bg">#F2F2F2</color>
+
+    <!-- grayscale -->
+    <color name="color_porcelain">#F3F6F7</color>
+    <color name="color_ghost">#C9D1D8</color>
+    <color name="color_ghost_20">#33C9D1D8</color>
+    <color name="color_ghost_30">#4DC9D1D8</color>
+    <color name="color_light_gray">#dcdcdc</color>
+    <color name="color_gray_border">#CFD7DB</color>
+    <color name="color_gray_placeholder">#b2beca</color>
+    <color name="color_gray_background">#EFF2F5</color>
+
+    <color name="color_recycler_background">#efefef</color>
+    <color name="color_separate_line">#F0F0F0</color>
+    <color name="color_separate_line_gray">#DBE2E7</color>
+
+    <color name="color_secondary_button">#78F3CE</color>
+
+    <!-- red -->
+    <color name="color_buttercup">#F1C40F</color>
+
+    <!-- pink -->
+
+    <!-- green -->
+    <color name="color_malachite">#00D664</color>
+    <color name="color_green_progress_bar">#D9F3E7</color>
+    <color name="color_green_btn_disable">#00ef9c</color>
+
+    <color name="color_background_button">#00A34C</color>
+    <color name="color_green">#3ba743</color>
+    <color name="color_black_primary">#00294C</color>
+    <color name="color_black_background">#0F1135</color>
+
+    <color name="color_text_black_10">#CDD7DE</color>
+    <color name="color_gray_background_50">#e5eaee</color>
+    <color name="color_gray_background_70">#4c6f8d</color>
+    <color name="color_gray_background_10">#F5F7F8</color>
+    <color name="color_btn_special_deal">#D8D8D8</color>
+    <color name="color_btn_deal">#18A4E1</color>
+    <color name="color_text_black_5">#7f98ae</color>
+
+    <color name="color_blue_70">#045daa</color>
+    <color name="color_black_25">#BFBFBF</color>
+    <!-- blue -->
+    <color name="color_oxford_blue">#3E495C</color>
+
+    <!-- color cart status -->
+    <color name="color_cart_status_empty">#D5D5D5</color>
+    <color name="color_cart_status_book">#F49C12</color>
+    <color name="color_cart_status_booked">#E74C3C</color>
+    <color name="color_cart_status_deposit">#00D664</color>
+    <color name="color_cart_status_contract">#3498DB</color>
+
+    <color name="color_booked_background">#3FD27B</color>
+    <color name="color_yellow_star">#E1AC4D</color>
+
+    <!-- color progress bar -->
+    <color name="color_red_border">#ED8080</color>
+    <color name="color_green_border">#00A34C</color>
+    <color name="color_line">#C1C1C1</color>
+    
+    
+    <color name="color_porcorn">#EAAB33</color>
+    <color name="background_gray_70">#F2F4F6</color>
+    <color name="color_menu_selected">#0084F6</color>
+    <color name="color_blue_background">#1A006196</color>
+
+    <color name="color_reject_status">#80ff0000</color>
+    <color name="color_accept_status">#a34cff</color>
+    <color name="color_booking_status">#00325D</color>
+</resources>

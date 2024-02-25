@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".flow.deals.dealdetail.DealDetailActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/deal_detail_tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/deal_detail_nav"
+            layout="@layout/nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/deal_detail_tv_reason_reject"
+        android:layout_below="@id/deal_detail_tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_red_15"
+        android:padding="10dp"
+        android:text="@string/deal_rejected"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="@dimen/large_font_size" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/fragment_deal_detail_btn_review"
+        android:layout_below="@id/deal_detail_tv_reason_reject"
+        android:background="@color/color_porcelain"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/deal_detail_header_section"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/item_deal_img_media"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/item_deal_flat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_empty_round_5"
+                    android:gravity="start"
+                    android:padding="12dp"
+                    android:textAppearance="@style/Bold"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/normal_font_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_deal_tv_project_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAppearance="@style/Medium"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/large_font_size" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/deal_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/deal_tab_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="@string/info"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/color_black_60"
+                        android:textSize="@dimen/normal_font_size" />
+
+                    <Button
+                        android:id="@+id/deal_tab_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="@string/history"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/color_black_60"
+                        android:textSize="@dimen/normal_font_size" />
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/fragment_deal_detail_info"
+                    layout="@layout/fragment_deal_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/deal_tab"
+                    android:layout_gravity="center" />
+
+                <include
+                    android:id="@+id/fragment_deal_detail_history"
+                    layout="@layout/fragment_deal_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/deal_tab"
+                    android:layout_gravity="center" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/fragment_deal_detail_btn_review"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_gradient"
+        android:text="@string/deal_review"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Medium"
+        android:visibility="gone" />
+
+</RelativeLayout>

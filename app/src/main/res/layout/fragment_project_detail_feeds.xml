@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:descendantFocusability="blocksDescendants">
+
+    <include
+        android:id="@+id/item_feeds_empty"
+        layout="@layout/item_project_detail_empty"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/project_feeds_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/project_feeds_recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_recycler_background" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="80dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/color_white">
+
+    <LinearLayout
+        android:id="@+id/item_apartment_comtent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_apartment_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="C08-01"
+            android:textAlignment="center"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/normal_font_size" />
+
+        <TextView
+            android:id="@+id/item_apartment_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_apartment_name"
+            android:text="70.22m2"
+            android:textAlignment="center"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/normal_font_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

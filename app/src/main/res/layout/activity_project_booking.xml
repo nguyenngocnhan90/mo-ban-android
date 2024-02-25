@@ -1,0 +1,384 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.moban.flow.projectdetail.booking.ProjectBookingActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/project_booking_tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/project_booking_nav"
+            layout="@layout/nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/project_booking_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/project_booking_tbToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/project_booking_btn_book_overview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:text="@string/overview"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_font_size" />
+
+                    <View
+                        android:id="@+id/project_booking_line_book_overview"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/white" />
+
+                </RelativeLayout>
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<Button-->
+                <!--android:id="@+id/project_booking_btn_book_detail"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:text="@string/detail"-->
+                <!--android:textAppearance="@style/Regular"-->
+                <!--android:textColor="@color/color_black"-->
+                <!--android:textSize="@dimen/large_font_size" />-->
+
+                <!--<View-->
+                <!--android:id="@+id/project_booking_line_book_detail"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="2dp"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:background="@color/white" />-->
+
+                <!--</RelativeLayout>-->
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/project_booking_btn_book_flat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:text="@string/project_detail_book"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/color_white_50"
+                        android:textSize="@dimen/large_font_size" />
+
+                    <View
+                        android:id="@+id/project_booking_line_book_flat"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/project_detail_btn_utility"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:text="@string/project_detail_utility"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/large_font_size" />
+
+                    <View
+                        android:id="@+id/project_detail_img_utility"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/white" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/project_booking_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_gray_background_50"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/item_booking_detail_generate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/project_booking_book_flat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_white_round_4"
+                        android:elevation="3dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_gray_background_50"
+                            android:paddingBottom="15dp"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="20dp"
+                            android:paddingTop="15dp"
+                            android:text="@string/project_detail_book"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/detail_font_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="20dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="5"
+                                android:text="@string/cus_fullname_require"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <EditText
+                                android:id="@+id/project_detail_customer_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="5"
+                                android:gravity="end"
+                                android:hint="@string/project_detail_customer_name_placeholder"
+                                android:inputType="textPersonName"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textColorHint="@color/color_black_30"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="20dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="3"
+                                android:text="@string/cus_phone_require"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <EditText
+                                android:id="@+id/project_detail_customer_phone"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="7"
+                                android:gravity="end"
+                                android:hint="@string/project_detail_customer_phone_placeholder"
+                                android:inputType="phone"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textColorHint="@color/color_black_30"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="20dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="5"
+                                android:text="@string/cus_cmnd_require"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <EditText
+                                android:id="@+id/project_detail_customer_cmnd"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="5"
+                                android:gravity="end"
+                                android:hint="@string/cus_cmnd_require_placeholder"
+                                android:inputType="numberDecimal"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textColorHint="@color/color_black_30"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="20dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="3"
+                                android:text="@string/birthday"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/project_detail_customer_birthday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="7"
+                                android:gravity="end"
+                                android:hint="@string/birthday_placeholder"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textColorHint="@color/color_black_30"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/project_booking_btn_book_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_gradient"
+                android:text="@string/project_detail_book_now"
+                android:textAppearance="@style/Medium" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/project_booking_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:animateLayoutChanges="true"
+        android:background="#000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@style/ProgressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+    </FrameLayout>
+
+</RelativeLayout>

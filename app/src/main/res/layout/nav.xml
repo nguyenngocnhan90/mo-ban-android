@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_clear">
+
+    <ImageView
+        android:id="@+id/nav_imgBack"
+        android:layout_width="@dimen/default_size"
+        android:layout_height="@dimen/default_size"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:padding="11dp"
+        android:src="@drawable/ic_back" />
+
+    <ImageView
+        android:id="@+id/nav_imgClose"
+        android:layout_width="@dimen/default_size"
+        android:layout_height="@dimen/default_size"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:padding="11dp"
+        android:src="@drawable/close"
+        android:tint="@color/white"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/nav_profile"
+        android:layout_width="@dimen/default_size"
+        android:layout_height="@dimen/default_size"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:padding="11dp"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/bar_profile"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/nav_tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/default_size"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/nav_notification"
+        android:layout_toEndOf="@+id/nav_imgBack"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAppearance="@style/Medium"
+        android:textSize="@dimen/large_font_size" />
+
+    <TextView
+        android:id="@+id/nav_tvSearchPartner"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/nav_notification"
+        android:layout_toEndOf="@+id/nav_imgBack"
+        android:background="@drawable/background_white_10_percent_round_4"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/home_search_partner"
+        android:textAppearance="@style/Regular"
+        android:textColor="@color/white_70"
+        android:textSize="@dimen/large_font_size"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/nav_tvSearchProject"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/nav_notification"
+        android:layout_toEndOf="@+id/nav_imgBack"
+        android:background="@drawable/background_white_10_percent_round_4"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/search_project"
+        android:textAppearance="@style/Regular"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_font_size"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/nav_add"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_add" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/nav_edit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/menu_edit"
+        android:tint="@color/white"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/nav_imgQRCode"
+        android:layout_width="@dimen/default_size"
+        android:layout_height="@dimen/default_size"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/nav_imgSearch"
+        android:adjustViewBounds="true"
+        android:padding="11dp"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/bar_scan_qr"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/nav_imgSearch"
+        android:layout_width="@dimen/default_size"
+        android:layout_height="@dimen/default_size"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/nav_notification"
+        android:adjustViewBounds="true"
+        android:padding="11dp"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/bar_search"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/nav_notification"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/nav_imgNotification"
+            android:layout_width="@dimen/default_size"
+            android:layout_height="@dimen/default_size"
+            android:adjustViewBounds="true"
+            android:padding="11dp"
+            android:src="@drawable/ic_bell" />
+
+        <TextView
+            android:id="@+id/nav_unread_notification"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/circle_icon_notification"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/search_project_advance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/nav_imgBack"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:text="@string/search_project_advance"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Bold"
+            android:textColor="@color/color_white_50"
+            android:textSize="@dimen/detail_font_size" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/next" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

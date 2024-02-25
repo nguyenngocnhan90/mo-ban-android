@@ -1,0 +1,488 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.moban.flow.profiledetail.ProfileDetailActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profile_detail_tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/profile_detail_nav"
+            layout="@layout/nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/profile_detail_tbToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/account_image"
+                    android:layout_width="132dp"
+                    android:layout_height="132dp"
+                    app:civ_border_color="@color/color_white"
+                    android:scaleType="centerCrop"
+                    app:civ_border_width="3dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/profile_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="17dp"
+                android:textAppearance="@style/Bold"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/profile_tv_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/profile_llInfo"
+                    android:layout_alignTop="@+id/profile_llInfo"
+                    android:layout_marginTop="55dp"
+                    android:background="@color/color_porcelain" />
+
+                <LinearLayout
+                    android:id="@+id/profile_llInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_white_5"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/profile_recycler_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/background_white_round_4"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp">
+
+                        <TextView
+                            android:id="@+id/profile_personal_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/personal_info"
+                            android:textAppearance="@style/Medium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/large_font_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/profile_tv_full_name_id"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="@string/full_name"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/profile_tv_full_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/profile_tv_gender_id"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="@string/gender"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/profile_tv_gender"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/profile_tv_birthday_id"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="@string/birthday"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/profile_tv_birthday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:id="@+id/profile_view_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/profile_tv_email_id"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="@string/email"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/profile_tv_email"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/profile_line_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:id="@+id/profile_view_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/profile_tv_phone_id"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="@string/phone"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="6">
+
+                                <TextView
+                                    android:id="@+id/profile_tv_phone"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="@dimen/normal_font_size" />
+
+                                <ImageView
+                                    android:id="@+id/profile_btn_call"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:tint="@color/color_black_60"
+                                    android:tintMode="src_in"
+                                    android:src="@drawable/icon_call"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/profile_line_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/profile_tv_address_id"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="@string/address"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/profile_tv_address"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/background_white_round_4"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp">
+
+                        <TextView
+                            android:id="@+id/profile_company_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/company_info"
+                            android:textAppearance="@style/Medium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/large_font_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/profile_tv_employee_code_id"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="@string/employee_code"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/profile_tv_employee_code"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/profile_tv_employee_title_id"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="@string/employee_title"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/profile_tv_employee_title"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_ghost_30" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/profile_tv_joined_date_id"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="@string/joined_date"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/profile_tv_joined_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/profile_btn_delete_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white"
+                        android:textColor="@color/color_black_60"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="@string/request_delete_account"
+                        android:textAppearance="@style/Medium" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_logo" />
+
+    <TextView
+        android:id="@+id/alert_welcome_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_clear"
+        android:text="chào mừng bạn đến với MoBan.vn APP"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@style/Medium"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/large_font_size" />
+
+    <TextView
+        android:id="@+id/alert_welcome_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_clear"
+        android:text="Ứng dụng đầu tiên chăm sóc cho đối tác kinh doanh.  Hãy cùng trải nghiệm với MoBan.vn App - Ngôi nhà mới cho môi giới MoBan.vn!"
+        android:textAlignment="center"
+        android:textAppearance="@style/Regular"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/normal_font_size" />
+
+    <Button
+        android:id="@+id/alert_welcome_btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="Đóng Cửa Sổ"
+        android:textAppearance="@style/Medium"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/normal_font_size" />
+
+</LinearLayout>

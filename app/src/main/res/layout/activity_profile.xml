@@ -1,0 +1,587 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.moban.flow.profile.ProfileActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profile_tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/profile_nav"
+            layout="@layout/nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/account_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_below="@id/profile_tbToolbar"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/account_view_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/account_image"
+                                android:layout_width="132dp"
+                                android:layout_height="137dp"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                app:civ_border_color="@color/color_white" />
+
+                            <TextView
+                                android:id="@+id/account_tv_rank"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_alignBottom="@+id/account_image"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/background_profile_half_round_buttercup"
+                                android:gravity="center"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Medium"
+                                android:textSize="11sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/account_tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="17dp"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/account_tv_role"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/color_white_50"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/account_tv_coin_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:text="TỔNG SỐ ĐIỂM THƯỞNG HIỆN CÓ"
+                            android:textAppearance="@style/Medium"
+                            android:textColor="@color/color_white"
+                            android:textSize="11sp" />
+
+                        <LinearLayout
+                            android:id="@+id/account_view_coin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/account_tv_coin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_white"
+                                android:textSize="22sp" />
+
+                            <ImageView
+                                android:id="@+id/account_img_coin"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:src="@drawable/ic_navigate_next_white_24dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:paddingVertical="60dp"
+                        android:id="@+id/account_view_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="12dp"
+                            android:orientation="horizontal"
+                            android:weightSum="4.2">
+
+                            <Button
+                                android:id="@+id/account_btn_login"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/background_white_round_4"
+                                android:enabled="true"
+                                android:gravity="center"
+                                android:text="@string/signIn"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Medium"
+                                android:textColor="@color/colorAccent" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="12dp"
+                                android:layout_weight="0.2" />
+
+                            <Button
+                                android:id="@+id/account_btn_register"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@drawable/background_white_round_4"
+                                android:enabled="true"
+                                android:gravity="center"
+                                android:text="@string/register"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Medium"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/ohio_partner_benefit"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/large_font_size" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="29dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignTop="@+id/profile_llInfo"
+                        android:layout_alignBottom="@+id/profile_llInfo"
+                        android:layout_marginTop="55dp"
+                        android:background="@color/color_porcelain" />
+
+                    <LinearLayout
+                        android:id="@+id/profile_llInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_white_5" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/account_recycler_badge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/background_white_round_4"
+                            android:elevation="3dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:id="@+id/account_btn_reward"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="31dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/ic_profile_achievement" />
+
+                                    <TextView
+                                        android:id="@+id/account_menu_tv_reward"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="16dp"
+                                        android:text="Thành Tích"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="-1dp"
+                                    android:background="@color/color_ghost_20" />
+
+                                <LinearLayout
+                                    android:id="@+id/account_btn_profile_info"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="46dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="29dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/ic_profile_info" />
+
+                                    <TextView
+                                        android:id="@+id/account_menu_tv_info"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="16dp"
+                                        android:text="Thông Tin"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="-1dp"
+                                    android:background="@color/color_ghost_20" />
+
+                                <LinearLayout
+                                    android:id="@+id/account_btn_deals"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="33dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/ic_profile_transaction" />
+
+                                    <TextView
+                                        android:id="@+id/account_menu_tv_deal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="16dp"
+                                        android:text="Giao Dịch"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginEnd="-1dp"
+                                android:background="@color/color_ghost_20" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:id="@+id/account_btn_link_reward"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="31dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/ic_profile_gift" />
+
+                                    <TextView
+                                        android:id="@+id/account_menu_tv_gift"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="16dp"
+                                        android:text="@string/link_reward"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="-1dp"
+                                    android:background="@color/color_ghost_20" />
+
+                                <LinearLayout
+                                    android:id="@+id/account_btn_mission"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="55dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="31dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/ic_profile_mission" />
+
+                                    <TextView
+                                        android:id="@+id/account_menu_tv_mission"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="16dp"
+                                        android:text="Nhiệm Vụ"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="-1dp"
+                                    android:background="@color/color_ghost_20" />
+
+                                <LinearLayout
+                                    android:id="@+id/account_btn_salary"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="56dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="30dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/ic_profile_income" />
+
+                                    <TextView
+                                        android:id="@+id/account_menu_tv_salary"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="16dp"
+                                        android:text="Thu Nhập"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginEnd="-1dp"
+                                android:background="@color/color_ghost_20" />
+
+                            <LinearLayout
+                                android:id="@+id/account_list_related_service"
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:id="@+id/account_btn_linkmart"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="43dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="31dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/account_linkmart" />
+
+                                    <TextView
+                                        android:id="@+id/account_menu_tv_linkmart"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="12dp"
+                                        android:text="@string/link_mart"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="-1dp"
+                                    android:background="@color/color_ghost_20" />
+
+                                <LinearLayout
+                                    android:id="@+id/account_btn_linkhub"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="31dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/account_linkhub" />
+
+                                    <TextView
+                                        android:id="@+id/account_menu_tv_linkhub"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="15dp"
+                                        android:text="@string/linkhub"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="-1dp"
+                                    android:background="@color/color_ghost_20" />
+
+                                <LinearLayout
+                                    android:id="@+id/account_btn_linkbook"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="43dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="30dp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/account_linkbook" />
+
+                                    <TextView
+                                        android:id="@+id/account_menu_tv_linkbook"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="13dp"
+                                        android:text="@string/linkbook"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

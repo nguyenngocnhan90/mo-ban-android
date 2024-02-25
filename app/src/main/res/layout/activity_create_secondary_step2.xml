@@ -1,0 +1,838 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.moban.flow.secondary.create.step2.CreateSecondaryStep2Activity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/create_secondary_step2_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/create_secondary_step2_nav"
+            layout="@layout/nav_create_secondary_project"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/create_secondary_step2_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_gray_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/tabbar_steps2"
+                layout="@layout/tabbar_step_create_secondary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_white_round_4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_gray_background_50"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/require_info"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Bold"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/detail_font_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/short_title"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/large_font_size" />
+
+                    <EditText
+                        android:id="@+id/secondary_step2_ed_short_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/short_title_placeholder"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp"
+                        android:textColor="@color/color_black"
+                        android:textColorHint="@color/color_gray_placeholder"
+                        android:textSize="@dimen/normal_font_size" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_ghost_30" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:text="@string/total_area"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/color_black_60"
+                        android:textSize="@dimen/normal_font_size" />
+
+                    <EditText
+                        android:id="@+id/secondary_step2_ed_total_area"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:gravity="end"
+                        android:hint="@string/total_area_placeholder"
+                        android:inputType="numberDecimal"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/color_black"
+                        android:textColorHint="@color/color_gray_placeholder"
+                        android:textSize="@dimen/normal_font_size" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_ghost_30" />
+
+                <LinearLayout
+                    android:id="@+id/secondary_step2_view_select_purpose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:text="@string/purpose_bds"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/normal_font_size" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="7"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/secondary_step2_tv_select_purpose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/select_purpose"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_ghost_30" />
+
+                <LinearLayout
+                    android:id="@+id/secondary_step1_view_select_type_bds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:text="@string/type_bds"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/normal_font_size" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/secondary_step2_tv_select_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/select_type_bds"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_ghost_30" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/price_bds"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/large_font_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/secondary_step2_ed_price_bds"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="7"
+                            android:hint="@string/price_bds_placeholder"
+                            android:inputType="number"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/color_black"
+                            android:textColorHint="@color/color_gray_placeholder"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <TextView
+                            android:id="@+id/secondary_step2_tv_price_bds_unit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_weight="4"
+                            android:gravity="end"
+                            android:textColor="@color/color_black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_ghost_30" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/fee_owner"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/large_font_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/secondary_step2_ed_fee_owner"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="7"
+                            android:hint="@string/fee_owner_placeholder"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/color_black"
+                            android:textColorHint="@color/color_gray_placeholder"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <TextView
+                            android:id="@+id/secondary_step2_tv_fee_owner_unit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_weight="4"
+                            android:gravity="end"
+                            android:textColor="@color/color_black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_ghost_30" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/fee_bds"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/large_font_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/secondary_step2_ed_fee_bds"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="7"
+                            android:hint="@string/fee_bds_placeholder"
+                            android:inputType="number"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/color_black"
+                            android:textColorHint="@color/color_gray_placeholder"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_weight="4"
+                            android:gravity="end"
+                            android:text="%"
+                            android:textColor="@color/color_black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/secondary_step2_view_advance_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_gray_background_50"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="@string/advance_info"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Bold"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/detail_font_size" />
+
+
+                    <ImageView
+                        android:id="@+id/secondary_step2_img_advance_info"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arrow_down" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/secondary_step2_content_advance_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/project_code_or_name"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/large_font_size" />
+
+                        <TextView
+                            android:id="@+id/secondary_step2_ed_project_code_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="0dp"
+                            android:paddingTop="0dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/project_code_or_name_placeholder"
+                            android:textColor="@color/color_gray_placeholder"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_ghost_30" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:text="@string/texture"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <EditText
+                            android:id="@+id/secondary_step2_ed_texture"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="end"
+                            android:hint="@string/texture_placeholder"
+                            android:inputType="textPersonName"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black"
+                            android:textColorHint="@color/color_gray_placeholder"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_ghost_30" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:text="@string/no_hau"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <EditText
+                            android:id="@+id/secondary_step2_ed_no_hau"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="end"
+                            android:hint="@string/no_hau_placeholder"
+                            android:inputType="numberDecimal"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black"
+                            android:textColorHint="@color/color_gray_placeholder"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_ghost_30" />
+
+                    <LinearLayout
+                        android:id="@+id/secondary_step1_view_select_direction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="5"
+                            android:text="@string/main_direction"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="5"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp">
+
+                            <TextView
+                                android:id="@+id/secondary_step2_tv_select_direction"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/select_main_direction"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_ghost_30" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:text="@string/place_area"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <EditText
+                            android:id="@+id/secondary_step2_ed_place_area"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="end"
+                            android:hint="@string/place_area_placeholder"
+                            android:inputType="numberDecimal"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black"
+                            android:textColorHint="@color/color_gray_placeholder"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_ghost_30" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:text="@string/construction_area"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <EditText
+                            android:id="@+id/secondary_step2_ed_construction_area"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="end"
+                            android:hint="@string/construction_area_placeholder"
+                            android:inputType="numberDecimal"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black"
+                            android:textColorHint="@color/color_gray_placeholder"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_ghost_30" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:text="@string/street_front_house"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <EditText
+                            android:id="@+id/secondary_step2_ed_street_front_house"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="end"
+                            android:hint="@string/street_front_house_placeholder"
+                            android:inputType="numberDecimal"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black"
+                            android:textColorHint="@color/color_gray_placeholder"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_ghost_30" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:text="@string/num_of_beds"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <EditText
+                            android:id="@+id/secondary_step2_ed_num_of_beds"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="end"
+                            android:hint="@string/num_of_beds_placeholder"
+                            android:inputType="number"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black"
+                            android:textColorHint="@color/color_gray_placeholder"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_ghost_30" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:text="@string/num_wc"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/normal_font_size" />
+
+                        <EditText
+                            android:id="@+id/secondary_step2_ed_num_wc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="end"
+                            android:hint="@string/num_wc_placeholder"
+                            android:inputType="number"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black"
+                            android:textColorHint="@color/color_gray_placeholder"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_ghost_30" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/favorite_point"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/large_font_size" />
+
+                        <EditText
+                            android:id="@+id/secondary_step2_ed_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="top|start"
+                            android:hint="@string/favorite_point_placeholder"
+                            android:paddingStart="0dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/color_black"
+                            android:textColorHint="@color/color_black_30"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/secondary_step2_keyboard_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

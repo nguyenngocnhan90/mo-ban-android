@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_book_empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/empty" />
+
+        <TextView
+            android:id="@+id/project_detail_empty_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/Regular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_font_size" />
+
+        <Button
+            android:id="@+id/project_reservation_now"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_gradient_round_4"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/project_detail_quick_book"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Medium"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/normal_font_size"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

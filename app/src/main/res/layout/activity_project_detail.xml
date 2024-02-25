@@ -1,0 +1,1472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".flow.newprojectdetail.ProjectDetailActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:scaleType="centerCrop" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/prj_detail_tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/prj_detail_nav"
+            layout="@layout/nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/new_project_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/prj_detail_tbToolbar">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/prj_detail_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/prj_detail_view_booking"
+            android:layout_below="@id/prj_detail_tbToolbar"
+            android:background="#F2F5F7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/prj_detail_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prj_detail_tv_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Căn hộ - quận 9"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/medium_font_size" />
+
+                        <TextView
+                            android:id="@+id/prj_detail_tv_prj_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Căn hộ - quận 9"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginVertical="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/project_tv_discount_service_fee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/title_font_size" />
+
+                            <TextView
+                                android:id="@+id/project_tv_service_fee_separator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="-"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_30"
+                                android:textSize="@dimen/title_font_size" />
+
+                            <TextView
+                                android:id="@+id/project_tv_service_fee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_30"
+                                android:textSize="@dimen/title_font_size" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/prj_detail_img_logo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp" />
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_text_field_bg">
+
+                    <LinearLayout
+                        android:id="@+id/prj_detail_view_bar_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/prj_detail_view_book"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/prj_detail_img_book"
+                                android:layout_width="48dp"
+                                android:layout_height="44dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@android:color/transparent"
+                                android:backgroundTint="@color/color_text_field_bg"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/giao_dich" />
+
+                            <TextView
+                                android:id="@+id/prj_detail_tv_book"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="Đăng Ký Bán"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/detail_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/prj_detail_view_cart"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/prj_detail_img_cart"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@android:color/transparent"
+                                android:backgroundTint="@color/color_text_field_bg"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/dat_cho" />
+
+
+                            <TextView
+                                android:id="@+id/prj_detail_tv_cart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="Giỏ Hàng"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/detail_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/prj_detail_view_marketplace"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/prj_detail_img_marketplace"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@android:color/transparent"
+                                android:backgroundTint="@color/color_text_field_bg"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/marketplace" />
+
+
+                            <TextView
+                                android:id="@+id/prj_detail_tv_marketplace"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="Marketplace"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/detail_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/prj_detail_view_news"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/prj_detail_img_news"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@android:color/transparent"
+                                android:backgroundTint="@color/color_text_field_bg"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/bookings" />
+
+
+                            <TextView
+                                android:id="@+id/prj_detail_tv_news"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="Tin Tức"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/detail_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/prj_detail_view_salekit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/prj_detail_img_salekit"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@android:color/transparent"
+                                android:backgroundTint="@color/color_text_field_bg"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/dich_vu" />
+
+
+                            <TextView
+                                android:id="@+id/prj_detail_tv_salekit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="Sale Kit"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/detail_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/prj_detail_view_review"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/prj_detail_img_review"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@android:color/transparent"
+                                android:backgroundTint="@color/color_text_field_bg"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/danh_gia" />
+
+
+                            <TextView
+                                android:id="@+id/prj_detail_tv_review"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="Đánh Giá"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/detail_font_size" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:lines="2"
+                            android:text="@string/confirmed_revenue"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/medium_font_size" />
+
+                        <TextView
+                            android:id="@+id/prj_detail_tv_fee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="4.0"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/large_font_size_18" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:text="Phí Dịch Vụ"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/medium_font_size" />
+
+                        <TextView
+                            android:id="@+id/prj_detail_tv_hh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:maxLines="1"
+                            android:text="65%"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/large_font_size_18" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:text="% Ứng Phí"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/medium_font_size" />
+
+                        <TextView
+                            android:id="@+id/prj_detail_tv_deposit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="20"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/large_font_size_18" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:text="Giá (m2)"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/medium_font_size" />
+
+                        <TextView
+                            android:id="@+id/prj_detail_tv_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="--"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/large_font_size_18" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/prj_detail_view_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:padding="10dp"
+                            android:scrollHorizontally="true"
+                            android:text="@string/review"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/large_font_size" />
+
+                        <TextView
+                            android:id="@+id/prj_detail_rating_btn_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:padding="10dp"
+                            android:scrollHorizontally="true"
+                            android:text="@string/detail"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/colorAccent_50"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/prj_detail_tv_review_average"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:lines="1"
+                                    android:text="5.0"
+                                    android:textAppearance="@style/Bold"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="40dp" />
+
+                                <TextView
+                                    android:id="@+id/prj_detail_tv_review_count"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/not_review"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/color_black_60"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                                <Button
+                                    android:id="@+id/prj_detail_btn_rating_now"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/background_gradiant_button"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:text="@string/review_now"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="10dp" />
+
+                                <Button
+                                    android:id="@+id/prj_detail_btn_my_rating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/color_clear"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:text="@string/my_review"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="10dp" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:background="@color/color_black_4" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_marginStart="10dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/rating_juridical"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/color_black_60"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/rating_host_trust"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/color_black_60"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/rating_location"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/color_black_60"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/rating_price"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/color_black_60"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/rating_design_utility"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/color_black_60"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/prj_detail_view_rating_chart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="30dp"
+                                android:orientation="vertical"
+                                android:weightSum="5">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+
+                                    <RelativeLayout
+                                        android:id="@+id/prj_detail_view_rating_progress_juridical_full"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="12dp"
+                                        android:layout_centerVertical="true"
+                                        android:background="@drawable/background_black_10_percent_round_4"
+                                        android:padding="2dp">
+
+                                        <RelativeLayout
+                                            android:id="@+id/prj_detail_view_rating_progress_juridical"
+                                            android:layout_width="40dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/background_accent_round_4" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="12dp"
+                                        android:layout_centerVertical="true"
+                                        android:background="@drawable/background_black_10_percent_round_4"
+                                        android:padding="2dp">
+
+                                        <RelativeLayout
+                                            android:id="@+id/prj_detail_view_rating_progress_host_trust"
+                                            android:layout_width="40dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/background_accent_round_4" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="12dp"
+                                        android:layout_centerVertical="true"
+                                        android:background="@drawable/background_black_10_percent_round_4"
+                                        android:padding="2dp">
+
+                                        <RelativeLayout
+                                            android:id="@+id/prj_detail_view_rating_progress_location"
+                                            android:layout_width="40dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/background_accent_round_4" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="12dp"
+                                        android:layout_centerVertical="true"
+                                        android:background="@drawable/background_black_10_percent_round_4"
+                                        android:padding="2dp">
+
+                                        <RelativeLayout
+                                            android:id="@+id/prj_detail_view_rating_progress_price"
+                                            android:layout_width="40dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/background_accent_round_4" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="12dp"
+                                        android:layout_centerVertical="true"
+                                        android:background="@drawable/background_black_10_percent_round_4"
+                                        android:padding="2dp">
+
+                                        <RelativeLayout
+                                            android:id="@+id/prj_detail_view_rating_progress_design_utility"
+                                            android:layout_width="40dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/background_accent_round_4" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="-30dp"
+                                android:orientation="vertical"
+                                android:weightSum="5">
+
+                                <TextView
+                                    android:id="@+id/prj_detail_tv_rating_juridical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical|right"
+                                    android:text="0.0"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                                <TextView
+                                    android:id="@+id/prj_detail_tv_rating_host_trust"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical|right"
+                                    android:text="0.0"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                                <TextView
+                                    android:id="@+id/prj_detail_tv_rating_location"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical|right"
+                                    android:text="0.0"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                                <TextView
+                                    android:id="@+id/prj_detail_tv_rating_price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical|right"
+                                    android:text="0.0"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                                <TextView
+                                    android:id="@+id/prj_detail_tv_rating_design_utility"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical|right"
+                                    android:text="0.0"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/prj_detail_view_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_background_gray"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingTop="15dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Tài Liệu"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/medium_font_size" />
+
+                        <TextView
+                            android:id="@+id/prj_detail_btn_view_all_doc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tất Cả"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/medium_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/prj_detail_view_document_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_white"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingTop="15dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/pdf" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp">
+
+                            <TextView
+                                android:id="@+id/prj_detail_tv_document_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:textAppearance="@style/Medium"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/prj_detail_tv_document_update_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/prj_detail_btn_document_more"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="10dp"
+                            android:src="@drawable/tab_more" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/prj_detail_view_special_deals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/special_deal_bg"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/special_deal_tag" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/prj_detail_deal_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:padding="10dp"
+                            android:scrollHorizontally="true"
+                            android:text="Ưu đãi đặc biệt"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/large_font_size" />
+
+                        <TextView
+                            android:id="@+id/prj_detail_special_deal_btn_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:padding="10dp"
+                            android:scrollHorizontally="true"
+                            android:text="Tất cả"
+                            android:textAppearance="@style/Bold"
+                            android:textColor="#D8D8D8"
+                            android:textSize="@dimen/normal_font_size" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/prj_detail_special_deal_recycle_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/prj_detail_view_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_gray_background_50"
+                        android:paddingStart="10dp"
+                        android:paddingTop="15dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="15dp"
+                        android:text="Tổng Quan Dự Án"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/medium_font_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="15dp"
+                            android:paddingEnd="0dp"
+                            android:paddingBottom="15dp"
+                            android:text="Giới Thiệu"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/color_black_60"
+                            android:textSize="@dimen/large_font_size" />
+
+                        <TextView
+                            android:id="@+id/project_pr_tv_info_intro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textAppearance="@style/Regular"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/large_font_size" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_separate_line" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:paddingStart="10dp"
+                            android:paddingTop="15dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="15dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="@string/project_name"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/large_font_size" />
+
+                            <TextView
+                                android:id="@+id/project_pr_tv_info_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:textAlignment="textEnd"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/large_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_separate_line" />
+
+                        <LinearLayout
+                            android:id="@+id/project_info_hostname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:paddingStart="10dp"
+                            android:paddingTop="15dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="15dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:text="@string/project_hosting"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/large_font_size" />
+
+                            <TextView
+                                android:id="@+id/prj_detail_tv_info_hostname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|end"
+                                android:layout_weight="8"
+                                android:textAlignment="textEnd"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/large_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/project_info_hostname_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_separate_line" />
+
+                        <LinearLayout
+                            android:id="@+id/project_info_map"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:paddingStart="10dp"
+                            android:paddingTop="15dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="15dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:text="@string/map"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/large_font_size" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|end"
+                                android:layout_weight="8"
+                                android:text="@string/view_map"
+                                android:textAlignment="textEnd"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/large_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/project_info_map_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_separate_line" />
+
+                        <LinearLayout
+                            android:id="@+id/project_info_zoning"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:paddingStart="10dp"
+                            android:paddingTop="15dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="15dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/project_info_zoning_tv_title"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:text="@string/zoning"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/large_font_size" />
+
+                            <TextView
+                                android:id="@+id/project_info_zoning_tv_website"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|end"
+                                android:layout_weight="8"
+                                android:text="@string/view_zoning"
+                                android:textAlignment="textEnd"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/large_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/project_info_zoning_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_separate_line" />
+
+                        <LinearLayout
+                            android:id="@+id/project_info_website"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:paddingStart="10dp"
+                            android:paddingTop="15dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="15dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/project_info_website_tv_title"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:text="@string/project_website"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/large_font_size" />
+
+                            <TextView
+                                android:id="@+id/project_info_website_tv_website"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|end"
+                                android:layout_weight="8"
+                                android:textAlignment="textEnd"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/large_font_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/project_info_website_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_separate_line" />
+
+                        <LinearLayout
+                            android:id="@+id/prj_detail_view_contact_admin"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/prj_detail_img_avatar"
+                                android:layout_width="44dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/default_avatar"
+                                app:civ_border_color="@color/color_white"
+                                app:civ_border_width="1dp" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="bottom"
+                                    android:text="@string/project_detail_admin_manage"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/color_black_60"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/prj_detail_tv_admin_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="@style/Regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/prj_detail_btn_call_admin"
+                                android:layout_width="44dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/call_admin" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_separate_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:scrollHorizontally="true"
+                                android:text="Dự án Liên Quan"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/medium_font_size" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/prj_detail_relate_product_recycle_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_background_gray"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:scrollHorizontally="true"
+                                android:text="Hoạt Động Gần Đây"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/prj_detail_recent_activity_recycle_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/prj_detail_view_booking"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_gray_background_50"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/prj_detail_tv_booking_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textAppearance="@style/Bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/detail_font_size_10"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/project_tv_discount_service_fee_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="@style/Bold"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/normal_font_size" />
+
+                <TextView
+                    android:id="@+id/project_tv_service_fee_separator_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="-"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black_30"
+                    android:textSize="@dimen/detail_font_size_10" />
+
+                <TextView
+                    android:id="@+id/project_tv_service_fee_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textAppearance="@style/Regular"
+                    android:textColor="@color/color_black_30"
+                    android:textSize="@dimen/detail_font_size_10" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/prj_detail_btn_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_gradiant_button"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:text="@string/project_detail_book_now"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

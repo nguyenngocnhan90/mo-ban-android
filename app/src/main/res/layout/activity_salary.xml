@@ -1,0 +1,470 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.moban.flow.webview.WebViewActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/salary_tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <include
+            android:id="@+id/salary_nav"
+            layout="@layout/nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/salary_tbToolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_recycler_background"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/salary_recycler_month"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_separate_line" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="25dp"
+                    android:paddingBottom="25dp">
+
+                    <TextView
+                        android:id="@+id/salary_tv_current_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tổng Thu nhập tháng 11"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Medium"
+                        android:textColor="@color/color_black_60"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/salary_tv_total_salary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="20,000,000 VND"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Regular"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="22sp"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/salary_loading_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:indeterminateDrawable="@drawable/drawable_circle_progress_bar_load_more"
+                        android:indeterminateDuration="1000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/salary_view_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/salary_view_support_fee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="#EFF2F5"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="1. Chi phí hỗ trợ"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/medium_font_size" />
+
+                            <LinearLayout
+                                android:id="@+id/salary_view_policy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/circle_icon_linkhouse"
+                                    android:gravity="center"
+                                    android:text="+"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/medium_font_size" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="10dp"
+                                    android:text="@string/salary_view_policy"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textAppearance="@style/Medium"
+                                    android:textColor="@color/color_black_60"
+                                    android:textSize="@dimen/detail_font_size" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@color/color_clear"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:orientation="horizontal"
+                            android:paddingRight="15dp">
+
+                            <TextView
+                                android:id="@+id/salary_tv_2month_revenue_title"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Doanh Thu Nhóm 2 Tháng Liền Kề"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/salary_tv_2month_revenue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@color/color_clear"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Bậc Hỗ Trợ"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/salary_tv_coefficients"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@color/color_clear"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Mức Phí Hỗ Trợ"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/salary_tv_hard_salary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/normal_font_size" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/salary_view_group_management"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="#EFF2F5"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+                            <TextView
+                                android:id="@+id/salary_tv_group_management"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/group_management_fee"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/medium_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@color/color_clear"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+                            <TextView
+                                android:id="@+id/salary_tv_group_revenue_title"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Doanh Thu Nhóm"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/salary_tv_group_revenue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@color/color_clear"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+                            <TextView
+                                android:id="@+id/salary_tv_group_commission_rate"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:lines="2"
+                                android:text="Hoa Hồng Hỗ Trợ (2%)"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/color_black_60"
+                                android:textSize="@dimen/normal_font_size" />
+
+                            <TextView
+                                android:id="@+id/salary_tv_group_commission"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/salary_layout_personal_revenue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="#EFF2F5"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+                            <TextView
+                                android:id="@+id/salary_tv_personal_revenue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/personal_revenue"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/medium_font_size" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/salary_recycler_personal_revenue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="#E5EAEE"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tổng Thu Nhập"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/medium_font_size" />
+
+                            <TextView
+                                android:id="@+id/salary_tv_total_revenue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="#E5EAEE"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Thuế TNCN (10%)"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/medium_font_size" />
+
+                            <TextView
+                                android:id="@+id/salary_tv_total_tax"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textAppearance="@style/Regular"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="#D0D9E1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Thu Nhập Sau Thuế"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/medium_font_size" />
+
+                            <TextView
+                                android:id="@+id/salary_tv_final_salary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textAppearance="@style/Bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/normal_font_size" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

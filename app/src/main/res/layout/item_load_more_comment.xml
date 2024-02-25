@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white">
+
+        <RelativeLayout
+            android:id="@+id/item_load_more_rltContent"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/item_load_more_comment_tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/feed_load_more_comment"
+                android:textAppearance="@style/Medium"
+                android:textColor="@color/colorPrimaryDark70"
+                android:textSize="@dimen/medium_font_size" />
+
+            <ProgressBar
+                android:id="@+id/item_load_more_pbProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/drawable_circle_progress_bar_load_more"
+                android:indeterminateDuration="1000"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/item_load_more_vBreakingLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/item_load_more_rltContent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_light_gray" />
+
+    </RelativeLayout>
+
+</FrameLayout>
