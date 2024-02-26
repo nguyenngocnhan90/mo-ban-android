@@ -54,7 +54,7 @@ class NewFeedAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         private const val TYPE_FEED_WELCOME = 15
     }
 
-    private var arrayFixedItemType: MutableList<Int> = arrayOf(TYPE_FEED_WELCOME, TYPE_FEED_PRODUCT_TYPE, TYPE_FEED_BANNERS, TYPE_FEED_NEW_DEALS, TYPE_FEED_STATISTICS, TYPE_FEED_HOT_PROJECT, TYPE_FEED_RECENT_VIEW, TYPE_FEED_TOP_PARTNER).toMutableList()
+    private var arrayFixedItemType: MutableList<Int> = arrayOf(TYPE_FEED_WELCOME, TYPE_FEED_BANNERS, TYPE_FEED_NEW_DEALS, TYPE_FEED_STATISTICS, TYPE_FEED_HOT_PROJECT, TYPE_FEED_RECENT_VIEW, TYPE_FEED_TOP_PARTNER).toMutableList()
     var listener: FeedItemHandler? = null
     var listenerHeaderMenu: FeedItemHeaderItemHandler? = null
     var listenerWelcome: FeedWelcomeItemHandler? = null
