@@ -74,7 +74,7 @@ class LHApplication : Application() {
 
         // OneSignal Initialization
         OneSignal.initWithContext(this);
-        OneSignal.setAppId("83a11d4a-0a4b-40a4-ba0c-8588c0178f88")
+        OneSignal.setAppId("e7e4abd7-4d6a-4196-a7c9-a9d9e0143045")
         OneSignal.unsubscribeWhenNotificationsAreDisabled(true)
         OneSignal.addSubscriptionObserver { stateChange ->
             val userId = stateChange.to.userId
