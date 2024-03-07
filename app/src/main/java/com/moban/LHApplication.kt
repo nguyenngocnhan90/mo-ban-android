@@ -115,7 +115,7 @@ class LHApplication : Application() {
     }
 
     fun initNetComponent() {
-        rootUrl = if (BuildConfig.DEBUG) ServerURL.stagingURL else ServerURL.productionURL
+        rootUrl = if (BuildConfig.DEBUG) ServerURL.productionURL else ServerURL.productionURL
         netComponent = DaggerNetComponent.builder()
                 .appModule(AppModule(this))
                 .netModule(NetModule(rootUrl + "api/", this))
