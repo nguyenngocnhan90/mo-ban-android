@@ -28,7 +28,7 @@ class Permission {
                     if (ActivityCompat.shouldShowRequestPermissionRationale(
                                     context as Activity,
                                     Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                        DialogUtil.showErrorDialog(context, getString(context, R.string.ohio_request),
+                        DialogUtil.showErrorDialog(context, getString(context, R.string.app_moban_request),
                                 getString(context, R.string.read_storage_request), context.getString(R.string.open_setting),
                                 context.getString(R.string.skip), View.OnClickListener {
                             AppUtil.openSettingApp(context)
@@ -55,7 +55,7 @@ class Permission {
                     if (ActivityCompat.shouldShowRequestPermissionRationale(
                                     context as Activity,
                                     Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                        DialogUtil.showErrorDialog(context, getString(context, R.string.ohio_request),
+                        DialogUtil.showErrorDialog(context, getString(context, R.string.app_moban_request),
                                 getString(context, R.string.read_storage_request), context.getString(R.string.open_setting),
                                 context.getString(R.string.skip), View.OnClickListener {
                             AppUtil.openSettingApp(context)

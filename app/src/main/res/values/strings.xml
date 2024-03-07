@@ -66,15 +66,15 @@
     <string name="level">Level</string>
     <string name="date_update">Cập nhật ngày</string>
 
-    <string name="update_ohio">Cập nhật MoBan.vn</string>
-    <string name="update_ohio_new_version">MoBan.vn đã có phiên bản mới.</string>
-    <string name="update_ohio_force_new_version">MoBan.vn đã có phiên bản mới.\n Hãy cập nhật ngay nhé.</string>
+    <string name="update_app">Cập nhật MoBan.vn</string>
+    <string name="update_app_new_version">MoBan.vn đã có phiên bản mới.</string>
+    <string name="update_app_force_new_version">MoBan.vn đã có phiên bản mới.\n Hãy cập nhật ngay nhé.</string>
 
     <string name="network_no_internet">Không có kết nối mạng</string>
     <string name="network_check_and_try_again">Vui lòng kiểm tra và thử lại</string>
     <string name="network_try_again">Thử lại</string>
 
-    <string name="ohio_request">Yêu cầu từ MoBan.vn App</string>
+    <string name="app_moban_request">Yêu cầu từ MoBan.vn App</string>
     <string name="read_storage_request">MoBan.vn muốn truy cập vào bộ nhớ thiết bị của bạn</string>
 
     <string name="no_location_permission">Chưa bật định vị</string>
@@ -172,7 +172,7 @@
     <string name="request_delete_account">Yêu cầu xóa tài khoản</string>
     <string name="delete_account">Xóa Tài Khoản</string>
 
-    <string name="ohio_partner_benefit">Để nhận được những hỗ trợ, ưu đãi dành riêng cho đối tác MoBan.vn</string>
+    <string name="app_partner_benefit">Để nhận được những hỗ trợ, ưu đãi dành riêng cho đối tác MoBan.vn</string>
 
     <!--Home-->
     <string name="home_all">Tất Cả</string>
@@ -290,7 +290,7 @@
     <string name="project_overview">Tổng Quan Dự Án</string>
     <string name="intro">Giới Thiệu</string>
     <string name="project_location">Vị Trí Dự Án</string>
-    <string name="ohio_policy">Chính Sách MoBan.vn</string>
+    <string name="app_policy">Chính Sách MoBan.vn</string>
     <string name="hosting_policy">Chính Sách Chủ Đầu Tư</string>
     <string name="error_not_select_city_title">Bạn Chưa Chọn Tỉnh/Thành Phố</string>
     <string name="error_not_select_city_message">Vui lòng chọn Tỉnh/Thành Phố trước</string>

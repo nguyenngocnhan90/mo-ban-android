@@ -87,7 +87,7 @@ class ProfileDetailActivity : BaseMvpActivity<IProfileDetailView, IProfileDetail
             WebViewActivity.start(
                 this,
                 getString(R.string.request_delete_account),
-                "https://ohio.net.vn/policy/delete",
+                "https://moban.vn/policy/delete",
                 webOption = WebViewOption.DELETE_ACCOUNT
             )
         }

@@ -108,14 +108,14 @@ class SplashActivity : AppCompatActivity() {
     private fun showDialogUpdateApp(forceUpdate: Boolean) {
         var updateDialog: Dialog? = null
         if (forceUpdate) {
-            updateDialog = DialogUtil.showInfoDialog(this, getString(this, R.string.update_ohio),
-                    getString(this, R.string.update_ohio_force_new_version), getString(R.string.update),
+            updateDialog = DialogUtil.showInfoDialog(this, getString(this, R.string.update_app),
+                    getString(this, R.string.update_app_force_new_version), getString(R.string.update),
                     View.OnClickListener {
                         openGooglePlay()
                     })
         } else {
-            updateDialog = DialogUtil.showConfirmDialog(this, false, getString(this, R.string.update_ohio),
-                    getString(this, R.string.update_ohio_new_version), getString(R.string.update), getString(R.string.skip),
+            updateDialog = DialogUtil.showConfirmDialog(this, false, getString(this, R.string.update_app),
+                    getString(this, R.string.update_app_new_version), getString(R.string.update), getString(R.string.skip),
                     View.OnClickListener {
                         openGooglePlay()
                     },
