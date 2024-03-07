@@ -30,12 +30,12 @@ import kotlinx.android.synthetic.main.item_feed_top_menu.view.*
 class NewFeedAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
-        private const val TYPE_FEED_BANNERS_INDEX = 2
-        private const val TYPE_FEED_NEW_DEALS_INDEX = 3
-        private const val TYPE_FEED_STATISTICS_INDEX = 4
-        private const val TYPE_FEED_HOT_PROJECT_INDEX = 5
-        private const val TYPE_FEED_RECENT_VIEW_PROJECT_INDEX = 6
-        private const val TYPE_FEED_TOP_PARTNER_INDEX = 7
+        private const val TYPE_FEED_BANNERS_INDEX = 1
+        private const val TYPE_FEED_NEW_DEALS_INDEX = 2
+        private const val TYPE_FEED_STATISTICS_INDEX = 3
+        private const val TYPE_FEED_HOT_PROJECT_INDEX = 4
+        private const val TYPE_FEED_RECENT_VIEW_PROJECT_INDEX = 5
+        private const val TYPE_FEED_TOP_PARTNER_INDEX = 6
 
         private const val TYPE_FEED = 0
         private const val TYPE_LOAD_MORE = 1

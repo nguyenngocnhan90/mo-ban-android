@@ -110,6 +110,10 @@ class NewHomeFragment : BaseMvpFragment<INewHomeFragmentView, INewHomeFragmentPr
         refreshData()
     }
 
+    private fun stopLoading() {
+        new_home_refresh_layout.isRefreshing = false
+    }
+
     private fun requireLogin() {
         val context = activity!!
 
@@ -643,31 +647,37 @@ class NewHomeFragment : BaseMvpFragment<INewHomeFragmentView, INewHomeFragmentPr
         } else {
             feedAdapter.appendPosts(feeds, canLoadMore)
         }
-        new_home_refresh_layout.isRefreshing = false
+        stopLoading()
     }
 
     override fun bindingBanner(photos: List<Photo>) {
+        stopLoading()
         feedAdapter.bindingBanners(photos)
     }
 
     override fun bindingTopPartner(users: List<User>) {
+        stopLoading()
         feedAdapter.bindTopPartner(users)
     }
 
     override fun bindingHomeDeals(deals: List<HomeDeal>) {
-        val homeDeals = deals.filter { !it.deals.isNullOrEmpty() }.filter { it.isValid() }
+        stopLoading()
+        val homeDeals = deals.filter { it.deals.isNotEmpty() }.filter { it.isValid() }
         feedAdapter.bindNewDealsProject(homeDeals)
     }
 
     override fun bindingHighlightProjects(project: List<Project>) {
+        stopLoading()
         feedAdapter.bindingHighlightsProject(project)
     }
 
     override fun bindingStatistics(statistics: List<Statistic>) {
+        stopLoading()
         feedAdapter.bindStatistics(statistics)
     }
 
     override fun bindingRecentViewedProjects(project: List<Project>) {
+        stopLoading()
         feedAdapter.bindingRecentProject(project)
     }
 
