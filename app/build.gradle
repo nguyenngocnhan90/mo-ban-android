@@ -17,7 +17,7 @@ android {
         moban {
             dimension "version"
             applicationId "com.moban"
-            versionCode 79
+            versionCode 1
             versionName "1.0.0"
             manifestPlaceholders = [
                     appIcon         : "@mipmap/ic_launcher",

@@ -15,7 +15,7 @@
             android:id="@+id/sign_in_button_anonymous"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:background="@color/color_clear"
             android:gravity="center"
             android:paddingStart="16dp"
@@ -36,7 +36,7 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_centerInParent="true"
             android:adjustViewBounds="true"
             android:src="@drawable/ic_logo" />
@@ -123,6 +123,7 @@
         android:gravity="center"
         android:text="@string/register_title"
         android:textAlignment="center"
+        android:visibility="invisible"
         android:textAllCaps="true"
         android:textColor="@color/colorAccent"
         android:textSize="13sp" />
